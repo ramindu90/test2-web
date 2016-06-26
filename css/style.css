@@ -431,7 +431,7 @@ background-color: #00aeef;
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
 	border-top: 0px;
 	vertical-align: middle;
-	padding: 15px
+	padding: 3px;
 }
 .table > tbody > tr > td.tbl-logo{
 	padding-right: 0px
@@ -651,7 +651,6 @@ body {
 	padding: 15px 20px;
 	margin: 0 0 0 20px;
 	position: relative;
-	top: -7px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
@@ -662,4 +661,19 @@ body {
 .infobox a:hover {
 	background-color: #fff;
 	color: #505050;
+}
+
+.infobox-button {
+	left: 30px;
+}
+
+.infobox-text {
+	left: 50px;
+}
+a i {
+	margin-right: 3px;
+}
+
+.show-more {
+	padding: 8px 10px;
 }
