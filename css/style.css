@@ -190,7 +190,7 @@ background-color: #517398;
   transition: all 0.4s ease;
 }
 .form-inline input[type=submit]:hover{
-	background: #00A2DE
+	background: #517398
 }
 .page-title {
 	padding-top: 30px;
