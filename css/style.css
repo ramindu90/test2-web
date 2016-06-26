@@ -620,33 +620,39 @@ body {
 	margin-left: 30px;
 }
 
-/* Info Banner
+/* ---------------------------------- */
+/* Infobox
 ------------------------------------- */
-.info-banner {
-	background: #f6f6f6;
-	display: block;
-	padding: 35px 38px;
+.infobox {
+	background-color: #2db2ea;
+	font-size: 34px;
+	font-weight: 300;
+	line-height: 40px;
+	color: #fff;
+	padding: 45px 0;
+	text-align: center;
+	margin: 0 0 47px 0;
 }
 
-.info-content {
-	float: left;
-	font-size: 18px;
+.infobox a {
+	color: #fff;
+	font-weight: 600;
+	font-size: 15px;
+	border: 1px solid #fff;
+	background-color: transparent;
+	text-transform: uppercase;
+	padding: 15px 20px;
+	margin: 0 0 0 20px;
+	position: relative;
+	top: -7px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
-.info-banner p {
-	margin: 2px 0 0 0;
-	color: #888;
-}
-
-.info-banner a.button {
-	float: right;
-	margin: 7px 0 0 0;
-	font-size: 16px;
-	padding: 11px 17px;
-}
-
-.info-banner h3 {
-	font-size: 22px;
-	font-weight: 500;
-	line-height: 32px;
+.infobox a:hover {
+	background-color: #fff;
+	color: #505050;
 }
