@@ -25,10 +25,11 @@ body{
 
 }
 .header-social ul li a:hover{
-	color: #00AEEF
+	color: #517398
 }
 .navbar-default .navbar-nav > li > a{
-	color: #202020;
+    background-color: #f0f0f0;
+    color: #000000;
 	font-size: 16px;
 	font-weight: 400;
 	text-transform: capitalize;
@@ -41,7 +42,7 @@ body{
 }
 .navbar-default .navbar-nav > li > a.active:after{
 
-  background-color: #00aeef;
+  background-color: #517398;
   bottom: -24px;
   content: "";
   height: 5px;
@@ -51,7 +52,7 @@ body{
   width: 100%;
 }
 .navbar-default .navbar-nav > li > a::after {
-background-color: #00aeef;
+background-color: #517398;
   bottom: -24px;
   content: "";
   height: 5px;
@@ -77,24 +78,25 @@ background-color: #00aeef;
   padding-top: 10px;
 }
 .nav-button {
-  background-color: #c2c2c2;
+  background-color: #f0f0f0;
   border: medium none;
-  color: #fff;
-  font-size: 16px;
+  color: #000000;
+  font-size: 17px;
   padding: 8px 20px;
-  border-radius: 2px;
+  /*border-radius: 2px;*/
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   transition: all 0.4s ease;
+    font-weight: 600;
 }
 .nav-button.login{
-	background-color: #00AEEF;
+	/*background-color: #517398;*/
 	margin-right: 5px;
 }
 .nav-button:hover{
-	background-color: #00AEEF;
-
+	background-color: #517398;
+    color: #ffffff;
 }
 .navbar{
 	margin-bottom: 0px;
@@ -175,7 +177,7 @@ background-color: #00aeef;
 }
 
 .form-inline input[type=submit]{
-	background: #00AEEF;
+	background: #517398;
 	color: #fff;
 	height: 40px;
 	width: 90px;
@@ -225,7 +227,7 @@ background-color: #00aeef;
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	border-bottom: 2px solid #00AEEF
+	border-bottom: 2px solid #517398
 }
 .single-work h3{
 	color: #202020;
@@ -249,8 +251,8 @@ background-color: #00aeef;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
-.single-work.active{	
-	background: #00AEEF
+.single-work.active{
+	background: #517398
 }
 .single-work.active h3{
 	color: #fff
@@ -259,7 +261,7 @@ background-color: #00aeef;
 	color: #eeeeee
 }
 .single-work:hover{
-	background: #00AEEF
+	background: #517398
 }
 .single-work:hover h3{
 	color: #fff
@@ -275,7 +277,7 @@ background-color: #00aeef;
   border-width: 4px;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  border-color: transparent transparent #00AEEF;
+  border-color: transparent transparent #517398;
   border-style: solid;
   border-width: 4px;
   color: #666666;
@@ -344,7 +346,7 @@ background-color: #00aeef;
 }
 
 .tab-content ul.job-seeker li a .overlay{
-	
+
 }
 .tab-content ul.job-seeker li a .overlay h3 {
   bottom: -100px;
@@ -402,14 +404,14 @@ background-color: #00aeef;
 	font-size: 14px
 }
 .table tr td p i{
-	color: #00AEEF
+	color: #517398
 }
 .table tr td p{
 	font-size: 13px
 }
 .table tr td a{
 	color: #fff;
-	background: #00AEEF;
+	background: #517398;
 	padding:12px 15px;
 	border-radius: 5px;
 	font-size: 13px;
@@ -422,11 +424,11 @@ background-color: #00aeef;
 	transition: all 0.1s ease-in-out;
 }
 .table tr:hover td a{
-	background: #0486B7
+	background: #00aaa5
 }
 .table tr:hover td a:hover{
 	background: #fff;
-	color: #00AEEF
+	color: #517398
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
 	border-top: 0px;
@@ -450,7 +452,7 @@ background-color: #00aeef;
 	background: #F4FFFF
 }
 .table tr:hover{
-	background: #00AEEF;
+	background: #517398;
 	color: #fff
 }
 
@@ -483,7 +485,7 @@ background-color: #00aeef;
   text-transform: uppercase;
 }
 .job-add a {
-  background: none repeat scroll 0 0 #00aeef;
+  background: none repeat scroll 0 0 #517398;
   border-radius: 5px;
   color: #fff;
   display: inline-block;
@@ -516,10 +518,10 @@ background-color: #00aeef;
   border-radius: 50%;
 }
 .testimonial .owl-theme .owl-controls .owl-page span{
-	background: #00AEEF
+	background: #517398
 }
 .client-text {
-  background: none repeat scroll 0 0 #00aeef;
+  background: none repeat scroll 0 0 #517398;
   border-radius: 2px;
   color: #fff;
   margin-left: 175px;
@@ -538,7 +540,7 @@ background-color: #00aeef;
 
 .footer-area{
 	background: #000;
-	border-top: 4px solid #00AEEF;
+	border-top: 4px solid #517398;
 	padding-bottom: 20px
 
 }
@@ -577,7 +579,7 @@ background-color: #00aeef;
 	font-weight: 700;
 }
 .single-footer ul li a:hover{
-	color: #00aeef;
+	color: #517398;
 	text-decoration: none;
 }
 
@@ -591,7 +593,7 @@ background-color: #00aeef;
 	margin-left: 20px;
 }
 .footer-copy span a{
-	color: #00aeef;
+	color: #517398;
 	font-weight: 800;
 }
 body {
