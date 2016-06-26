@@ -651,7 +651,6 @@ body {
 	padding: 15px 20px;
 	margin: 0 0 0 20px;
 	position: relative;
-	top: -7px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
@@ -662,4 +661,12 @@ body {
 .infobox a:hover {
 	background-color: #fff;
 	color: #505050;
+}
+
+.infobox-button {
+	left: 30px;
+}
+
+.infobox-text {
+	left: 50px;
 }
