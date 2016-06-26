@@ -26,12 +26,13 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.css">
     <link rel="stylesheet" href="css/owl.transitions.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -83,35 +84,30 @@
     </div>
     <div class="container slider-content">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+
                 <h2>Job Searching Just Got So Easy</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi
                     sit ipsam laboriosam velit adipisci quibusdam aliquam teneturo!</p>
-                <div class="search-form wow pulse" data-wow-delay="0.8s">
+                <div class="main-search-bar search-form wow pulse" data-wow-delay="0.8s">
                     <form action="" class=" form-inline">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Job Key Word">
+                            <input type="text" class="form-control main-search" placeholder="Job Key Word">
                         </div>
                         <div class="form-group">
-                            <select name="" id="location" class="form-control">
-                                <option>Select Your City</option>
-                                <option selected>New york, CA</option>
-                                <option>New york, CA</option>
-                                <option>New york, CA</option>
-                                <option>New york, CA</option>
+                            <input type="text" class="form-control main-search" placeholder="Job Key Word">
+                        </div>
+                        <div id="specialism-search" class="form-group">
+                            <select class="form-control main-search selectpicker" data-show-subtext="true" data-live-search="true">
+                                <option value="" disabled selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select name="" id="category" class="form-control">
-                                <option>Select Your Category</option>
-                                <option selected>Graphic Design</option>
-                                <option>Web Design</option>
-                                <option>App Design</option>
-                            </select>
+                            <button class="search-button form-control main-search"><i class="fa fa-search"></i></button>
                         </div>
-                        <input type="submit" class="btn" value="Search">
-
-
                     </form>
                 </div>
             </div>
@@ -339,6 +335,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/main.js"></script>

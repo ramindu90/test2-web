@@ -1,5 +1,5 @@
 body{
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .header-connect{
@@ -154,23 +154,30 @@ background-color: #00aeef;
 	background: #fff
 }
 .search-form {
-  background-color: #fff;
+  /*background-color: #fff;*/
   border-radius: 5px;
   padding: 20px 0;
 }
-.form-inline .form-control, .form-inline .form-control {
+.form-inline .form-control {
   background: none repeat scroll 0 0 #eeeeee;
-  border-radius: 1px;
+  /*border-radius: 1px;*/
   color: #333;
-  font-style: italic;
-  height: 40px;
+  /*font-style: italic;*/
+  height: 60px;
   margin-right: 10px;
-  width: 195px;
+  width: 270px;
 }
+
+.main-search.form-control{
+	border-radius: 0 !important;
+    -webkit-appearance: none;
+    border: none;
+}
+
 .form-inline input[type=submit]{
 	background: #00AEEF;
 	color: #fff;
-	height: 40px;
+	height: 59px;
 	width: 90px;
 	border-radius: 1px;
 	font-weight: bold;
@@ -650,3 +657,13 @@ body {
 	font-weight: 500;
 	line-height: 32px;
 }
+
+/*.btn.main-search {*/
+    /*background: #00AEEF;*/
+    /*color: #fff;*/
+    /*height: 59px;*/
+    /*width: 90px;*/
+    /*border-radius: 1px;*/
+    /*font-weight: bold;*/
+    /*font-size: 16px;*/
+/*}*/
