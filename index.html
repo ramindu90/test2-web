@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/custom.css">
+
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -47,7 +49,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+                    data-target="#main-navigation-bar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -58,16 +60,19 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <div class="button navbar-right">
-                <button class="navbar-btn nav-button wow" data-wow-delay="0.6s">Sign up</button>
-                <button class="navbar-btn nav-button wow login" data-wow-delay="0.8s">Login</button>
-                <button class="wow navbar-btn nav-button employer" data-wow-delay="0.2s"><a href="#">Employer
-                    Site</a></button>
+            <div class="navbar-right">
+                <button class="navbar-btn nav-button wow" data-wow-delay="0.6s"><i class="fa fa-lock"></i> Sign up</button>
+                <button class="navbar-btn nav-button wow login" data-wow-delay="0.8s" data-toggle="modal" href="#login-modal"><i class="fa fa-user"></i> Login</button>
+                <button class="navbar-btn nav-button wow employer" data-wow-delay="0.2s">Employer Site</button>
             </div>
-            <ul class="main-nav nav navbar-nav navbar-">
-                <li class="wow fadeInDown" data-wow-delay="0s"><a href="#">Browse Jobs</a></li>
-                <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="#">Blog</a></li>
-            </ul>
+            <div class="navbar-nav">
+                <button class="navbar-btn nav-button wow" data-wow-delay="0.6s">Browse Jobs</button>
+                <button class="navbar-btn nav-button wow" data-wow-delay="0.6s">Blog</button>
+            </div>
+            <!--<ul class="main-nav button nav navbar-nav">-->
+                <!--<li class="wow fadeInDown" data-wow-delay="0s"><a href="#">Browse Jobs</a></li>-->
+                <!--<li class="wow fadeInDown" data-wow-delay="0.1s"><a href="#">Blog</a></li>-->
+            <!--</ul>-->
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
@@ -76,9 +81,13 @@
     <div class="slider">
         <div id="bg-slider" class="owl-carousel owl-theme">
 
-            <div class="item"><img src="img/slider-image-3.jpg" alt="Mirror Edge"></div>
-            <div class="item"><img src="img/slider-image-2.jpg" alt="The Last of us"></div>
-            <div class="item"><img src="img/slider-image-1.jpg" alt="GTA V"></div>
+            <!--<div class="item"><img src="img/slider-image-3.jpgj" alt="Mirror Edge"></div>-->
+            <!--<div class="item"><img src="img/slider-image-2.jpgj" alt="The Last of us"></div>-->
+            <!--<div class="item"><img src="img/slider-image-1.jpgj" alt="GTA V"></div>-->
+            <div class="item" style="color: #adadad;"></div>
+            <div class="item" style="color: #adadad;"></div>
+            <div class="item" style="color: #adadad;"></div>
+
 
         </div>
     </div>
@@ -365,6 +374,77 @@
     </div>
 </div>
 
+<!-- Login Modal -->
+<div class="modal fade" id="login-modal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <ul class="tabs-nav">
+                    <li class="" ><a href="#registerTab" onclick="changeLoginView('toLogin')">Login</a></li>
+                    <li><a href="#loginTab" onclick="changeLoginView('toRegister')">Register</a></li>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </ul>
+            </div>
+            <div class="modal-body">
+                <div class="tabs-container">
+                    <!-- Login -->
+                    <div class="tab-content" id="loginTab" style="display: none;">
+                        <form method="post" class="login">
+                            <p class="form-row form-row-wide">
+                                <input type="text" class="input-text" name="username" id="username" placeholder="Username or Email Address" value="" />
+                            </p>
+                            <p class="form-row form-row-wide">
+                                <input class="input-text" type="password" name="password" id="password" placeholder="Password"/>
+                            </p>
+                            <p class="form-row form-row-wide">
+                                <input type="submit" class="button" name="login" value="Login" />
+                            </p>
+                            <p class="form-row">
+                                <label for="rememberme" class="rememberme login-font">
+                                    <input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label>
+                            </p>
+                            <p class="lost_password login-font">
+                                <a href="#" >Lost Your Password?</a>
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Register -->
+                    <div class="tab-content" id="registerTab" style="display: none;">
+                        <form method="post" class="register">
+                            <p class="form-row form-row-wide">
+                                <input type="email" class="input-text" name="reg_email" id="reg_email" value="" placeholder="Email Address"/>
+                            </p>
+                            <p class="form-row form-row-wide">
+                                <input type="text" class="input-text" name="reg_username" id="reg_username" value="" placeholder="Username"/>
+                            </p>
+                            <p class="form-row form-row-wide">
+                                <input type="password" class="input-text" name="password" id="reg_password" placeholder="Password"/>
+                            </p>
+                            <p class="form-row form-row-wide">
+                                <input type="password" class="input-text" name="password" id="reg_password2" placeholder="Repeat Password"/>
+                            </p>
+                            <p class="form-row">
+                                <input type="submit" class="button" name="register" value="Register" />
+                            </p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <div style="display: inline-block; margin: 0 auto;">
+                    <button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img src="img/login/facebookN.png"/>"</button>
+                    <button id="twitter" class="login-button-vertical" ><img src="img/login/twitterN.png"/>"</button>
+                    <button id="google" class="customGPlusSignIn login-button-vertical"><img src="img/login/gmailN.png"/></button>
+                    <button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img src="img/login/linkedInN.png"/>"</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -373,5 +453,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/wow.js"></script>
 <script src="js/main.js"></script>
+<script src="js/custom/socialLogin.js"></script>
+
 </body>
 </html>
