@@ -2,6 +2,12 @@ body{
 	font-family: 'Open Sans', sans-serif, "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/*
+0096cc
+1A5DAD
+1A5DAD
+*/
+
 .header-connect{
 	padding-top: 10px;
 }
@@ -25,7 +31,7 @@ body{
 
 }
 .header-social ul li a:hover{
-	color: #517398
+	color: #0096cc
 }
 .navbar-default .navbar-nav > li > a{
     background-color: #f0f0f0;
@@ -42,7 +48,7 @@ body{
 }
 .navbar-default .navbar-nav > li > a.active:after{
 
-  background-color: #517398;
+  background-color: #0096cc;
   bottom: -24px;
   content: "";
   height: 5px;
@@ -52,7 +58,7 @@ body{
   width: 100%;
 }
 .navbar-default .navbar-nav > li > a::after {
-background-color: #517398;
+background-color: #0096cc;
   bottom: -24px;
   content: "";
   height: 5px;
@@ -91,11 +97,11 @@ background-color: #517398;
     font-weight: 600;
 }
 .nav-button.login{
-	/*background-color: #517398;*/
+	/*background-color: #0096cc;*/
 	margin-right: 5px;
 }
 .nav-button:hover{
-	background-color: #517398;
+	background-color: #0096cc;
     color: #ffffff;
 }
 .navbar{
@@ -161,7 +167,7 @@ background-color: #517398;
   padding: 20px 0;
 }
 .form-inline .form-control {
-  background: none repeat scroll 0 0 #eeeeee;
+  background: none repeat scroll 0 0 #ffffff;
   /*border-radius: 1px;*/
   color: #333;
   /*font-style: italic;*/
@@ -177,7 +183,7 @@ background-color: #517398;
 }
 
 .form-inline input[type=submit]{
-	background: #517398;
+	background: #0096cc;
 	color: #fff;
 	height: 40px;
 	width: 90px;
@@ -190,7 +196,7 @@ background-color: #517398;
   transition: all 0.4s ease;
 }
 .form-inline input[type=submit]:hover{
-	background: #517398
+	background: #0096cc
 }
 .page-title {
 	padding-top: 30px;
@@ -227,7 +233,7 @@ background-color: #517398;
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	border-bottom: 2px solid #517398
+	border-bottom: 2px solid #0096cc
 }
 .single-work h3{
 	color: #202020;
@@ -252,7 +258,7 @@ background-color: #517398;
 	transition: all 0.2s ease-in-out;
 }
 .single-work.active{
-	background: #517398
+	background: #0096cc
 }
 .single-work.active h3{
 	color: #fff
@@ -261,7 +267,7 @@ background-color: #517398;
 	color: #eeeeee
 }
 .single-work:hover{
-	background: #517398
+	background: #0096cc
 }
 .single-work:hover h3{
 	color: #fff
@@ -277,7 +283,7 @@ background-color: #517398;
   border-width: 4px;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  border-color: transparent transparent #517398;
+  border-color: transparent transparent #0096cc;
   border-style: solid;
   border-width: 4px;
   color: #666666;
@@ -404,16 +410,16 @@ background-color: #517398;
 	font-size: 14px
 }
 .table tr td p i{
-	color: #517398
+	color: #0096cc
 }
 .table tr td p{
 	font-size: 13px
 }
 .table tr td a{
 	color: #fff;
-	background: #517398;
+	background: #0096cc;
 	padding:12px 15px;
-	border-radius: 5px;
+	/*border-radius: 5px;*/
 	font-size: 13px;
 	text-decoration: none;
 
@@ -428,7 +434,7 @@ background-color: #517398;
 }
 .table tr:hover td a:hover{
 	background: #fff;
-	color: #517398
+	color: #0096cc
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
 	border-top: 0px;
@@ -452,7 +458,7 @@ background-color: #517398;
 	background: #F4FFFF
 }
 .table tr:hover{
-	background: #517398;
+	background: #0096cc;
 	color: #fff
 }
 
@@ -485,7 +491,7 @@ background-color: #517398;
   text-transform: uppercase;
 }
 .job-add a {
-  background: none repeat scroll 0 0 #517398;
+  background: none repeat scroll 0 0 #0096cc;
   border-radius: 5px;
   color: #fff;
   display: inline-block;
@@ -518,10 +524,10 @@ background-color: #517398;
   border-radius: 50%;
 }
 .testimonial .owl-theme .owl-controls .owl-page span{
-	background: #517398
+	background: #0096cc
 }
 .client-text {
-  background: none repeat scroll 0 0 #517398;
+  background: none repeat scroll 0 0 #0096cc;
   border-radius: 2px;
   color: #fff;
   margin-left: 175px;
@@ -540,11 +546,10 @@ background-color: #517398;
 
 .footer-area{
 	background: #000;
-	border-top: 4px solid #517398;
-	padding-bottom: 20px
-
+	border-top: 2px solid #0096cc;
 }
 .footer{
+	background: #25262a;
 	padding: 0px 0 80px 0;
 }
 .single-footer{
@@ -579,11 +584,12 @@ background-color: #517398;
 	font-weight: 700;
 }
 .single-footer ul li a:hover{
-	color: #517398;
+	color: #0096cc;
 	text-decoration: none;
 }
 
 .footer-copy{
+	background: #1e1f21;
 	color: #fff;
 	font-weight: 700;
 }
@@ -593,7 +599,7 @@ background-color: #517398;
 	margin-left: 20px;
 }
 .footer-copy span a{
-	color: #517398;
+	color: #0096cc;
 	font-weight: 800;
 }
 body {
@@ -633,7 +639,7 @@ body {
 /* Infobox
 ------------------------------------- */
 .infobox {
-	background-color: #2db2ea;
+	background-color: #0096cc;
 	font-size: 34px;
 	font-weight: 300;
 	line-height: 40px;

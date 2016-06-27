@@ -7,18 +7,42 @@
 
 }
 
+#specialism-search .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    /*white-space: nowrap;*/
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #ffffff none repeat scroll 0 0;
+    border: 0;
+    border-radius: 0;
+    height: inherit;
+    color: #929090;
+}
+
 #login-modal .nav > li > a:hover {
-    background-color: #517398;
+    background-color: #0096cc;
     color: #ffffff;
 }
 
 #login-modal .nav-tabs > li > a:hover {
-    border-color: #517398;
+    border-color: #0096cc;
     color: #ffffff;
 }
 
 #login-modal .form-inline input[type=submit]:hover {
-    background: #517398;
+    background: #0096cc;
     color: #ffffff;
 }
 
@@ -35,3 +59,9 @@
     -ms-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
+#show-more-jobs-btn {
+    display: inline-block !important;
+    text-align: center;
+}
+
