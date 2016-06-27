@@ -65,3 +65,33 @@
     text-align: center;
 }
 
+#login-modal .form-inline .form-group {
+    display: block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.general-text-input.form-control{
+    border-radius: 0 !important;
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    height: 50px;
+    margin-top: 5px;
+    width: 350px;
+}
+
+#login-username.general-text-input.form-control, #reg_email.general-text-input.form-control{
+    margin-top: 10px;
+}
+
+.login-button-vertical {
+    padding: 0;
+    border: none;
+    background: none;
+    display:inline;
+    margin-bottom:2px;
+}
+
+#login-modal .modal-content{
+    width: 380px;
+}
