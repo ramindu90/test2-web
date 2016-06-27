@@ -357,26 +357,26 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-body">
-                <ul class="nav nav-tabs">
-                    <li><a href="#registerTab" onclick="changeLoginView('toLogin')">Login</a></li>
-                    <li><a href="#loginTab" onclick="changeLoginView('toRegister')">Register</a></li>
+                <ul class="nav nav-tabs" data-tabs="tabs" id="login-nav-tabs">
+                    <li class="active"><a href="#loginTab" data-toggle="tab">Login</a></li>
+                    <li><a href="#registerTab" data-toggle="tab">Register</a></li>
                     <!--<button class="navbar-btn nav-button wow active" data-wow-delay="0.6s" href="#registerTab" onclick="changeLoginView('toLogin')" >Login</button>-->
                     <!--<button class="navbar-btn nav-button wow" data-wow-delay="0.6s" href="#loginTab" onclick="changeLoginView('toRegister')">Register</button>-->
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="float:right">×</button>
                 </ul>
-                <div class="tabs-container">
-                    <!-- Login -->
-                    <div class="tab-content" id="loginTab" style="display: none;">
 
+                <div class="tab-content">
+                    <!-- Login -->
+                    <div class="tab-pane active" id="loginTab">
                         <form action="" class= "form-inline">
                             <div class="form-group">
-                                <input type="text" class="input-text" name="username" id="username" placeholder="Username or Email Address" value="" />
+                                <input type="text" class="general-text-input form-control" name="username" id="login-username" placeholder="Username or Email Address" value="" />
                             </div>
                             <div class="form-group">
-                                <input class="input-text" type="password" name="password" id="password" placeholder="Password"/>
+                                <input class="general-text-input form-control" type="password" name="password" id="password" placeholder="Password"/>
                             </div>
                             <div id="specialism-search1" class="form-group">
-                                <input type="submit" class="button" name="login" value="Login" />
+                                <input type="submit" class="navbar-btn nav-button wow" name="login" value="Login" />
                             </div>
                             <div class="form-group">
                                 <label for="rememberme" class="rememberme login-font">
@@ -389,38 +389,92 @@
                             </div>
                         </form>
                     </div>
-
                     <!-- Register -->
-                    <div class="tab-content" id="registerTab" style="display: none;">
-                        <form method="post" class="register">
-                            <p class="form-row form-row-wide">
-                                <input type="email" class="input-text" name="reg_email" id="reg_email" value="" placeholder="Email Address"/>
-                            </p>
-                            <p class="form-row form-row-wide">
-                                <input type="text" class="input-text" name="reg_username" id="reg_username" value="" placeholder="Username"/>
-                            </p>
-                            <p class="form-row form-row-wide">
-                                <input type="password" class="input-text" name="password" id="reg_password" placeholder="Password"/>
-                            </p>
-                            <p class="form-row form-row-wide">
-                                <input type="password" class="input-text" name="password" id="reg_password2" placeholder="Repeat Password"/>
-                            </p>
-                            <p class="form-row">
-                                <input type="submit" class="button" name="register" value="Register" />
-                            </p>
+                    <div class="tab-pane" id="registerTab">
+                        <form action="" class= "form-inline">
+                            <div class="form-group">
+                                <input type="email" class="general-text-input form-control" name="reg_email" id="reg_email" value="" placeholder="Email Address"/>
+                            </div>
+                                <div class="form-group">
+                                <input type="text" class="general-text-input form-control" name="reg_username" id="reg_username" value="" placeholder="Username"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="general-text-input form-control" name="password" id="reg_password" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="general-text-input form-control" name="password" id="reg_password2" placeholder="Repeat Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="navbar-btn nav-button wow" name="register" value="Register" />
+                            </div>
 
                         </form>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer" style="text-align: center;">
+
                 <div style="display: inline-block; margin: 0 auto;">
-                    <button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img src="img/login/facebookN.png"/>"</button>
-                    <button id="twitter" class="login-button-vertical" ><img src="img/login/twitterN.png"/>"</button>
+                    <button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img src="img/login/facebookN.png"/></button>
+                    <button id="twitter" class="login-button-vertical" ><img src="img/login/twitterN.png"/></button>
                     <button id="google" class="customGPlusSignIn login-button-vertical"><img src="img/login/gmailN.png"/></button>
-                    <button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img src="img/login/linkedInN.png"/>"</button>
+                    <button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img src="img/login/linkedInN.png"/></button>
                 </div>
+
+                <!--<div class="tabs-container">-->
+                    <!-- Login -->
+                    <!--<div class="tab-content" id="loginTab" style="display: none;">-->
+                        <!--<form action="" class= "form-inline">-->
+                            <!--<div class="form-group">-->
+                                <!--<input type="text" class="input-text" name="username" id="username" placeholder="Username or Email Address" value="" />-->
+                            <!--</div>-->
+                            <!--<div class="form-group">-->
+                                <!--<input class="input-text" type="password" name="password" id="password" placeholder="Password"/>-->
+                            <!--</div>-->
+                            <!--<div id="specialism-search1" class="form-group">-->
+                                <!--<input type="submit" class="navbar-btn nav-button wow" name="login" value="Login" />-->
+                            <!--</div>-->
+                            <!--<div class="form-group">-->
+                                <!--<label for="rememberme" class="rememberme login-font">-->
+                                    <!--<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label>-->
+                            <!--</div>-->
+                            <!--<div class="form-group">-->
+                                <!--<p class="lost_password login-font">-->
+                                    <!--<a href="#" >Lost Your Password?</a>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+
+                    <!--&lt;!&ndash; Register &ndash;&gt;-->
+                    <!--<div class="tab-content" id="registerTab" style="display: none;">-->
+                        <!--<form method="post" class="register">-->
+                            <!--<p class="form-row form-row-wide">-->
+                                <!--<input type="email" class="input-text" name="reg_email" id="reg_email" value="" placeholder="Email Address"/>-->
+                            <!--</p>-->
+                            <!--<p class="form-row form-row-wide">-->
+                                <!--<input type="text" class="input-text" name="reg_username" id="reg_username" value="" placeholder="Username"/>-->
+                            <!--</p>-->
+                            <!--<p class="form-row form-row-wide">-->
+                                <!--<input type="password" class="input-text" name="password" id="reg_password" placeholder="Password"/>-->
+                            <!--</p>-->
+                            <!--<p class="form-row form-row-wide">-->
+                                <!--<input type="password" class="input-text" name="password" id="reg_password2" placeholder="Repeat Password"/>-->
+                            <!--</p>-->
+                            <!--<p class="form-row">-->
+                                <!--<input type="submit" class="button" name="register" value="Register" />-->
+                            <!--</p>-->
+
+                        <!--</form>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
+            <!--<div class="modal-footer" style="text-align: center;">-->
+                <!--<div style="display: inline-block; margin: 0 auto;">-->
+                    <!--<button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img src="img/login/facebookN.png"/>"</button>-->
+                    <!--<button id="twitter" class="login-button-vertical" ><img src="img/login/twitterN.png"/>"</button>-->
+                    <!--<button id="google" class="customGPlusSignIn login-button-vertical"><img src="img/login/gmailN.png"/></button>-->
+                    <!--<button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img src="img/login/linkedInN.png"/>"</button>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </div>
