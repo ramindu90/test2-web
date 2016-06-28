@@ -7,7 +7,7 @@
 
 }
 
-#specialism-search .btn {
+.specialism-search .btn {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -94,4 +94,75 @@
 
 #login-modal .modal-content{
     width: 380px;
+}
+
+.sub-slider-area{
+    position: relative;
+    height: 150px
+}
+.sub-slider-area #bg-slider .item img{
+    width: 100%;
+    height: 150px
+}
+
+.browse-btn {
+    display: block;
+    width: 125px;
+    border-left: 10px;
+    margin-top: 40px;
+}
+
+label {
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.resume-text-input-long.general-text-input.form-control {
+    width: inherit;
+}
+
+.resume-text-input-short.general-text-input.form-control {
+    width: 382px;
+}
+
+.specialism-search .resume-text-select-short.form-control {
+    margin-top: 5px;
+    width: 382px;
+    height: 50px;
+    border-radius: 0 !important;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+}
+
+.specialism-search .resume-text-select-short .btn {
+    padding: 0 12px;
+    height: 47px;
+}
+
+.larger-editor{
+    padding: 10px;
+    background: #FFF;
+    min-height: 100px;
+    max-height: 900px;
+    overflow: auto;
+    outline: none;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
+    resize: vertical;
+    border: 1px solid #ccc;
+}
+
+.add-education-btn {
+    display: block;
+    width: 250px;
+    border-left: 10px;
+}
+
+#educationInfoTable th {
+    text-align: center;
+}
+#workInfoTable th {
+    text-align: center;
 }

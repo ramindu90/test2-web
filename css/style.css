@@ -382,10 +382,9 @@ background-color: #0096cc;
 	left: 18px
 }
 .jobs{
-	margin-bottom: 10px
-}
-.jobs{
-	margin-top: 20px
+	margin-bottom: 10px;
+	margin-top: 20px;
+	margin-left: 140px;
 }
 .table tr{
 
@@ -684,4 +683,10 @@ a i {
 
 .show-more {
 	padding: 8px 20px;
+}
+
+.resume-text-input-short.form-control{
+	border-radius: 0 !important;
+	-webkit-appearance: none;
+	border: none;
 }

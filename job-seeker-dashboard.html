@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Job Find</title>
+    <meta name="description" content="company is a free job board template">
+    <meta name="author" content="Ohidul">
+    <meta name="keyword" content="html, css, bootstrap, job-board">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/nav-bar-side-menu.css">
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<!-- Body content -->
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#main-navigation-bar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-navigation-bar">
+            <div class="navbar-right">
+                <button class="navbar-btn nav-button wow" data-wow-delay="0.6s"><i class="fa fa-lock"></i> Sign up
+                </button>
+                <button class="navbar-btn nav-button wow login" data-wow-delay="0.8s" data-toggle="modal"
+                        href="#login-modal"><i class="fa fa-user"></i> Login
+                </button>
+                <button class="navbar-btn nav-button wow employer" data-wow-delay="0.2s">Employer Site</button>
+            </div>
+            <div class="navbar-nav">
+                <button class="navbar-btn nav-button wow" data-wow-delay="0.6s">Home</button>
+                <button class="navbar-btn nav-button wow" data-wow-delay="0.6s">Browse Jobs</button>
+                <button class="navbar-btn nav-button wow" data-wow-delay="0.6s">Blog</button>
+            </div>
+            <!--<ul class="main-nav button nav navbar-nav">-->
+            <!--<li class="wow fadeInDown" data-wow-delay="0s"><a href="#">Browse Jobs</a></li>-->
+            <!--<li class="wow fadeInDown" data-wow-delay="0.1s"><a href="#">Blog</a></li>-->
+            <!--</ul>-->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="sub-slider-area">
+    <div id="bg-slider">
+        <div class="item"><img src="img/banners/space-desk-workspace-coworking-cropped.jpg" alt="GTA V"></div>
+    </div>
+</div>
+
+<div class="content-area">
+    <div class="container jobs row">
+        <div class="col-md-3">
+            <div class="nav-side-menu">
+                <div class="brand">Dashboard Menu</div>
+                <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+                <div class="menu-list">
+
+                    <ul id="menu-content" class="menu-content collapse out">
+                        <li data-toggle="collapse" data-target="#profile" class="collapsed menu-list-item">
+                            <a href="#"><i class="fa fa-user fa-lg"></i> Profile</a>
+                        </li>
+                        <ul class="sub-menu collapse" id="profile">
+                            <li><a href="#"> View</a></li>
+                            <li><a href="#"> Edit</a></li>
+                        </ul>
+
+                        <li data-toggle="collapse" data-target="#products" class="collapsed menu-list-item">
+                            <a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="products">
+                            <li><a href="#"> CSS3 Animation</a></li>
+                            <li><a href="#"> General</a></li>
+                            <li><a href="#"> Buttons</a></li>
+                            <li><a href="#"> Tabs & Accordions</a></li>
+                            <li><a href="#"> Typography</a></li>
+                            <li><a href="#"> FontAwesome</a></li>
+                            <li><a href="#"> Slider</a></li>
+                            <li><a href="#"> Panels</a></li>
+                            <li><a href="#"> Widgets</a></li>
+                            <li><a href="#"> Bootstrap Model</a></li>
+                        </ul>
+
+
+                        <li data-toggle="collapse" data-target="#service" class="collapsed menu-list-item">
+                            <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="service">
+                            <li>New Service 1</li>
+                            <li>New Service 2</li>
+                            <li>New Service 3</li>
+                        </ul>
+
+
+                        <li data-toggle="collapse" data-target="#new" class="collapsed menu-list-item">
+                            <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+                        </li>
+                            <ul class="sub-menu collapse" id="new">
+                                <li>New New 1</li>
+                                <li>New New 2</li>
+                                <li>New New 3</li>
+                            </ul>
+
+                        <li class="menu-list-item">
+                            <a href="#">
+                                <i class="fa fa-users fa-lg"></i> Users
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="main-heading">
+                <h3><strong>WELCOME RAMINDU</strong></h3>
+            </div>
+            <div class="main-heading">
+                <h4><strong>MY PROFILE</strong></h4>
+            </div>
+
+            <section class="finder-profile-info">
+                <div class="main-heading col-md-5">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img src="img/login/defaultProfileImg.jpeg" alt="profile view" style="width:125px;height:125px; display: inline-block;"/>
+                        </div>
+                        <div class="col-md-1 col-md-offset-4">
+                            <button class="navbar-btn nav-button wow browse-btn" data-wow-delay="0.6s"><i class="fa fa-upload"></i> Browse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" class="resume-text-input-long general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Job Title</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Minimum Salary</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 specialism-search">
+                    <label for="full-name">Add Specialism</label>
+                    <select class="resume-text-select-short form-control selectpicker" data-show-subtext="true" data-live-search="true">
+                        <option value="" disabled selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Added Specialisms</label>
+                    <ol class="breadcrumb resume-text-input-short general-text-input form-control" style="margin-bottom: 5px;">
+                        <li>Home</li>
+                        <li>Library</li>
+                        <li>Data</li>
+                    </ol>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label for="description">Description</label>
+                    <div class="larger-editor" id="description">
+                        Hello my name is Mark William Connor and I’m a Web Designer & Web Developer from Melbourne, Australia. In pharetra orci dignissim, blandit mi semper, ultricies diam. Suspendisse malesuada suscipit nunc non volutpat. Sed porta nulla id orci laoreet tempor non consequat enim. Sed vitae aliquam velit. Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. Mauris nec erat ut libero vulputate pulvinar.
+                        Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. Mauris nec erat ut libero vulputate pulvinar.
+                    </div>
+                </div>
+            </section>
+            <section class="contact-info">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-heading">
+                        <h4><strong>CONTACT INFORMATION</strong></h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Phone Number</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Email</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Country</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">City</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label for="description">Complete Address</label>
+                    <div class="larger-editor" id="complete-address">
+
+                    </div>
+                </div>
+
+            </section>
+            <section class="educational-info">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-heading">
+                        <h4><strong>EDUCATIONAL INFORMATION</strong></h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="educationalInfoDiv" style="display: none; overflow-x:auto;">
+                    <table id="educationInfoTable" style="width:100%"   class="manage-table resumes responsive-table stacktable large-only">
+                    </table>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">School/ University</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="school-university" placeholder="Name of School or University" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Year</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="school-uni-year" placeholder="Passed out year" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Field of Study</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="field-of-study" placeholder="Field" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 specialism-search">
+                    <label for="full-name">Degree Level</label>
+                    <select id="degree-level" data-placeholder="Choose Category" class="resume-text-select-short form-control selectpicker" >
+                        <option value="" disabled selected>Select your degree level</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="expiry">Expiring Soon</option>
+                        <option value="ratehigh">Hourly Rate – Highest First</option>
+                        <option value="ratelow">Hourly Rate – Lowest First</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Grade/s</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="grade-s" placeholder="Field" value="" />
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="navbar-btn nav-button wow add-education-btn" data-wow-delay="0.6s" onclick="addEducationalInfo()"><i class="fa fa-plus-circle"></i> Education Details</button>
+                </div>
+            </section>
+            <section class="work-info">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-heading">
+                        <h4><strong>WORKING EXPERIENCE</strong></h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="workInfoDiv" style="display: none; overflow-x:auto;">
+                    <table id="workInfoTable" style="width:100%"   class="manage-table resumes responsive-table stacktable large-only">
+                    </table>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="work-place">Work Place</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="work-place" placeholder="Name of School or University" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="designation">Designation</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="designation" placeholder="Passed out year" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="number-of-years">Number of years</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="number-of-years" placeholder="Field" value="" />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label for="work-description">Work Description</label>
+                    <div class="larger-editor" id="work-description">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="navbar-btn nav-button wow add-education-btn" data-wow-delay="0.6s" onclick="addWorkInfo()"><i class="fa fa-plus-circle"></i> Experience</button>
+                </div>
+            </section>
+
+        </div>
+
+
+    </div>
+
+    <!-- Infobox -->
+    <div class="infobox">
+        <div class="container test-center">
+            <div class="col-md-7 col-md-offset-1 col-md-7 col-xs-6 infobox-text">Start Building Your Own Job Board Now
+            </div>
+            <div class="col-md-2 col-xs-3 infobox-button">
+                <a href="${pageContext.request.contextPath}/login">Get Started</a></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row page-title text-center  wow bounce" data-wow-delay=".7s">
+            <h5>TESTIMONIALS</h5>
+            <h2>WHAT PEOPLES ARE SAYING</h2>
+        </div>
+        <div class="row testimonial">
+            <div class="col-md-12">
+                <div id="testimonial-slider">
+                    <div class="item">
+                        <div class="client-text">
+                            <p>Jobify offer an amazing service and I couldn’t be happier! They
+                                are dedicated to helping recruiters find great candidates, wonderful service!</p>
+                            <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
+                        </div>
+                        <div class="client-face wow fadeInRight" data-wow-delay=".9s">
+                            <img src="img/client-face1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="client-text">
+                            <p>Jobify offer an amazing service and I couldn’t be happier! They
+                                are dedicated to helping recruiters find great candidates, wonderful service!</p>
+                            <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
+                        </div>
+                        <div class="client-face">
+                            <img src="img/client-face2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="client-text">
+                            <p>Jobify offer an amazing service and I couldn’t be happier! They
+                                are dedicated to helping recruiters find great candidates, wonderful service!</p>
+                            <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
+                        </div>
+                        <div class="client-face">
+                            <img src="img/client-face1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="client-text">
+                            <p>Jobify offer an amazing service and I couldn’t be happier! They
+                                are dedicated to helping recruiters find great candidates, wonderful service!</p>
+                            <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
+                        </div>
+                        <div class="client-face">
+                            <img src="img/client-face2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="footer-area">
+    <div class="container">
+        <div class="row footer">
+            <div class="col-md-4">
+                <div class="single-footer">
+                    <img src="img/footer-logo.png" alt="" class="wow pulse" data-wow-delay="1s">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati architecto quaerat facere
+                        blanditiis tempora sequi nulla accusamus, possimus cum necessitatibus suscipit quia autem
+                        mollitia, similique quisquam molestias. Vel unde, blanditiis.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-footer">
+                    <h4>Twitter update</h4>
+                    <div class="twitter-updates">
+                        <div class="single-tweets">
+                            <h5>ABOUT 9 HOURS</h5>
+                            <p><strong>AGOMeet Aldous</strong> - a Brave New World for #rails with more cohesion, less
+                                coupling and greater dev speed <a
+                                        href="http://t.co/rsekglotzs">http://t.co/rsekglotzs</a></p>
+                        </div>
+                        <div class="single-tweets">
+                            <h5>ABOUT 9 HOURS</h5>
+                            <p><strong>AGOMeet Aldous</strong> - a Brave New World for #rails with more cohesion, less
+                                coupling and greater dev speed <a
+                                        href="http://t.co/rsekglotzs">http://t.co/rsekglotzs</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single-footer">
+                    <h4>Useful lnks</h4>
+                    <div class="footer-links">
+                        <ul class="list-unstyled">
+                            <li><a href="">About Us</a></li>
+                            <li><a href="" class="active">Services</a></li>
+                            <li><a href="">Work</a></li>
+                            <li><a href="">Our Blog</a></li>
+                            <li><a href="">Customers Testimonials</a></li>
+                            <li><a href="">Affliate</a></li>
+                            <li><a href="">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-copy">
+            <p><span>(C) website, All rights reserved</span> | <span>Graphic Designed by <a
+                    href="#">Job Find</a></span> | <span> Web Designed by <a
+                    href="#">Job Find</a></span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="login-modal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <ul class="nav nav-tabs" data-tabs="tabs" id="login-nav-tabs">
+                    <li class="active"><a href="#loginTab" data-toggle="tab">Login</a></li>
+                    <li><a href="#registerTab" data-toggle="tab">Register</a></li>
+                    <!--<button class="navbar-btn nav-button wow active" data-wow-delay="0.6s" href="#registerTab" onclick="changeLoginView('toLogin')" >Login</button>-->
+                    <!--<button class="navbar-btn nav-button wow" data-wow-delay="0.6s" href="#loginTab" onclick="changeLoginView('toRegister')">Register</button>-->
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="float:right">×
+                    </button>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- Login -->
+                    <div class="tab-pane active" id="loginTab">
+                        <form action="" class="form-inline">
+                            <div class="form-group">
+                                <input type="text" class="general-text-input form-control" name="username"
+                                       id="login-username" placeholder="Username or Email Address" value=""/>
+                            </div>
+                            <div class="form-group">
+                                <input class="general-text-input form-control" type="password" name="password"
+                                       id="password" placeholder="Password"/>
+                            </div>
+                            <div id="specialism-search1" class="form-group">
+                                <input type="submit" class="navbar-btn nav-button wow" name="login" value="Login"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="rememberme" class="rememberme login-font">
+                                    <input name="rememberme" type="checkbox" id="rememberme" value="forever"/> Remember
+                                    Me</label>
+                            </div>
+                            <div class="form-group">
+                                <p class="lost_password login-font">
+                                    <a href="#">Lost Your Password?</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Register -->
+                    <div class="tab-pane" id="registerTab">
+                        <form action="" class="form-inline">
+                            <div class="form-group">
+                                <input type="email" class="general-text-input form-control" name="reg_email"
+                                       id="reg_email" value="" placeholder="Email Address"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="general-text-input form-control" name="reg_username"
+                                       id="reg_username" value="" placeholder="Username"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="general-text-input form-control" name="password"
+                                       id="reg_password" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="general-text-input form-control" name="password"
+                                       id="reg_password2" placeholder="Repeat Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="navbar-btn nav-button wow" name="register"
+                                       value="Register"/>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div style="display: inline-block; margin: 0 auto;">
+                    <button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img
+                            src="img/login/facebookN.png"/></button>
+                    <button id="twitter" class="login-button-vertical"><img src="img/login/twitterN.png"/></button>
+                    <button id="google" class="customGPlusSignIn login-button-vertical"><img
+                            src="img/login/gmailN.png"/></button>
+                    <button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img
+                            src="img/login/linkedInN.png"/></button>
+                </div>
+
+                <!--<div class="tabs-container">-->
+                <!-- Login -->
+                <!--<div class="tab-content" id="loginTab" style="display: none;">-->
+                <!--<form action="" class= "form-inline">-->
+                <!--<div class="form-group">-->
+                <!--<input type="text" class="input-text" name="username" id="username" placeholder="Username or Email Address" value="" />-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                <!--<input class="input-text" type="password" name="password" id="password" placeholder="Password"/>-->
+                <!--</div>-->
+                <!--<div id="specialism-search1" class="form-group">-->
+                <!--<input type="submit" class="navbar-btn nav-button wow" name="login" value="Login" />-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                <!--<label for="rememberme" class="rememberme login-font">-->
+                <!--<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                <!--<p class="lost_password login-font">-->
+                <!--<a href="#" >Lost Your Password?</a>-->
+                <!--</p>-->
+                <!--</div>-->
+                <!--</form>-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash; Register &ndash;&gt;-->
+                <!--<div class="tab-content" id="registerTab" style="display: none;">-->
+                <!--<form method="post" class="register">-->
+                <!--<p class="form-row form-row-wide">-->
+                <!--<input type="email" class="input-text" name="reg_email" id="reg_email" value="" placeholder="Email Address"/>-->
+                <!--</p>-->
+                <!--<p class="form-row form-row-wide">-->
+                <!--<input type="text" class="input-text" name="reg_username" id="reg_username" value="" placeholder="Username"/>-->
+                <!--</p>-->
+                <!--<p class="form-row form-row-wide">-->
+                <!--<input type="password" class="input-text" name="password" id="reg_password" placeholder="Password"/>-->
+                <!--</p>-->
+                <!--<p class="form-row form-row-wide">-->
+                <!--<input type="password" class="input-text" name="password" id="reg_password2" placeholder="Repeat Password"/>-->
+                <!--</p>-->
+                <!--<p class="form-row">-->
+                <!--<input type="submit" class="button" name="register" value="Register" />-->
+                <!--</p>-->
+
+                <!--</form>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+            <!--<div class="modal-footer" style="text-align: center;">-->
+            <!--<div style="display: inline-block; margin: 0 auto;">-->
+            <!--<button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img src="img/login/facebookN.png"/>"</button>-->
+            <!--<button id="twitter" class="login-button-vertical" ><img src="img/login/twitterN.png"/>"</button>-->
+            <!--<button id="google" class="customGPlusSignIn login-button-vertical"><img src="img/login/gmailN.png"/></button>-->
+            <!--<button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img src="img/login/linkedInN.png"/>"</button>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom/socialLogin.js"></script>
+<script src="js/custom/custom.js"></script>
+<script src="js/custom/jobFinderInfoAdd.js"></script>
+
+</body>
+</html>
