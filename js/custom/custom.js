@@ -55,3 +55,7 @@ $(document).ready(function() {
         console.log("ha ha");
     });
 });
+
+$(window).scroll(function(){
+    $("#dashboard-nav-side-menu").css("top",Math.max(0,280-$(this).scrollTop()));
+});
