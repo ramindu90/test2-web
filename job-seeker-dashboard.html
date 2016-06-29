@@ -91,19 +91,22 @@
 <div class="content-area">
     <div class="container jobs row">
         <div class="col-md-3">
-            <div class="nav-side-menu">
+            <div class="nav-side-menu dashboard-nav-side-menu">
                 <div class="brand">Dashboard Menu</div>
                 <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
                 <div class="menu-list">
 
                     <ul id="menu-content" class="menu-content collapse out">
+
                         <li data-toggle="collapse" data-target="#profile" class="collapsed menu-list-item">
-                            <a href="#"><i class="fa fa-user fa-lg"></i> Profile</a>
+                            <a href="#"><i class="fa fa-user fa-lg"></i> Profile <span class="arrow"></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="profile">
-                            <li><a href="#"> View</a></li>
-                            <li><a href="#"> Edit</a></li>
+                            <li><a href="#personal-info-section"> Personal Info</a></li>
+                            <li><a href="#contact-info-section"> Contact Info</a></li>
+                            <li><a href="#education-info-section"> Education Info</a></li>
+                            <li><a href="#work-info-section"> Work Info</a></li>
                         </ul>
 
                         <li data-toggle="collapse" data-target="#products" class="collapsed menu-list-item">
@@ -155,11 +158,10 @@
             <div class="main-heading">
                 <h3><strong>WELCOME RAMINDU</strong></h3>
             </div>
-            <div class="main-heading">
-                <h4><strong>MY PROFILE</strong></h4>
-            </div>
-
-            <section class="finder-profile-info">
+            <section class="finder-profile-info" id="personal-info-section">
+                <div class="main-heading">
+                    <h4><strong>MY PROFILE</strong></h4>
+                </div>
                 <div class="main-heading col-md-5">
                     <div class="row">
                         <div class="col-md-1">
@@ -207,7 +209,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contact-info">
+            <section class="contact-info" id="contact-info-section">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-heading">
                         <h4><strong>CONTACT INFORMATION</strong></h4>
@@ -239,7 +241,7 @@
                 </div>
 
             </section>
-            <section class="educational-info">
+            <section class="educational-info" id="education-info-section">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-heading">
                         <h4><strong>EDUCATIONAL INFORMATION</strong></h4>
@@ -282,7 +284,7 @@
                     <button class="navbar-btn nav-button wow add-education-btn" data-wow-delay="0.6s" onclick="addEducationalInfo()"><i class="fa fa-plus-circle"></i> Education Details</button>
                 </div>
             </section>
-            <section class="work-info">
+            <section class="work-info" id="work-info-section">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-heading">
                         <h4><strong>WORKING EXPERIENCE</strong></h4>

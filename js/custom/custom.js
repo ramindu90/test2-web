@@ -55,3 +55,15 @@ $(document).ready(function() {
         console.log("ha ha");
     });
 });
+
+var wrap = $("#wrap");
+
+wrap.on("scroll", function(e) {
+
+    if (this.scrollTop > 147) {
+        wrap.addClass(".container.jobs.row .nav-side-menu");
+    } else {
+        wrap.removeClass(".container.jobs.row .nav-side-menu");
+    }
+
+});
