@@ -56,6 +56,6 @@ $(document).ready(function() {
     });
 });
 
-$(window).scroll(function(){
-    $("#dashboard-nav-side-menu").css("top",Math.max(0,280-$(this).scrollTop()));
-});
+// $(window).scroll(function(){
+//     $("#dashboard-nav-side-menu").css("top",Math.max(0,280-$(this).scrollTop()));
+// });
