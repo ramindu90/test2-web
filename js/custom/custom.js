@@ -56,14 +56,6 @@ $(document).ready(function() {
     });
 });
 
-var wrap = $("#wrap");
-
-wrap.on("scroll", function(e) {
-
-    if (this.scrollTop > 147) {
-        wrap.addClass(".container.jobs.row .nav-side-menu");
-    } else {
-        wrap.removeClass(".container.jobs.row .nav-side-menu");
-    }
-
+$(window).scroll(function(){
+    $("#dashboard-nav-side-menu").css("top",Math.max(0,280-$(this).scrollTop()));
 });

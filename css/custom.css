@@ -119,6 +119,14 @@ label {
     margin-bottom: 5px;
 }
 
+#resume-section label {
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
 .resume-text-input-long.general-text-input.form-control {
     width: inherit;
 }
@@ -167,6 +175,11 @@ label {
     text-align: center;
 }
 
-.dashboard-nav-side-menu{
+#dashboard-nav-side-menu{
+    position:fixed;
+    top:280px;
+}
 
+a.clickable-anchor:hover {
+    cursor: pointer;
 }
