@@ -1,6 +1,6 @@
 .employer {
-    margin-right: 30px;
-    margin-left: 30px;
+    background-color: #ffffff;
+    border: 2px solid #929090;
 }
 
 .normal-font {
@@ -142,6 +142,7 @@ label {
     border-radius: 0 !important;
     border: 1px solid #ccc;
     padding: 0 13px;
+    display: block;
 }
 
 .specialism-search .resume-text-select-short .btn {
@@ -160,6 +161,7 @@ label {
     -ms-word-wrap: break-word;
     resize: vertical;
     border: 1px solid #ccc;
+    width: inherit;
 }
 
 .add-education-btn {
@@ -175,11 +177,24 @@ label {
     text-align: center;
 }
 
-#dashboard-nav-side-menu{
-    position:fixed;
-    top:280px;
-}
+/*#dashboard-nav-side-menu{*/
+    /*position:fixed;*/
+    /*top:280px;*/
+/*}*/
 
 a.clickable-anchor:hover {
     cursor: pointer;
+}
+
+.row.footer-copy {
+    text-align: center;
+}
+
+.row.footer-copy p{
+    padding-top: 10px;
+}
+
+.collapse.navbar-collapse{
+    margin-left: 130px;
+    /*margin-right: 140px;*/
 }
