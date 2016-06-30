@@ -77,7 +77,7 @@
     border: 1px solid #ccc;
     height: 50px;
     margin-top: 5px;
-    width: 350px;
+    /*width: 350px;*/
 }
 
 #login-username.general-text-input.form-control, #reg_email.general-text-input.form-control{
@@ -132,12 +132,12 @@ label {
 }
 
 .resume-text-input-short.general-text-input.form-control {
-    width: 382px;
+    /*width: 382px;*/
 }
 
 .specialism-search .resume-text-select-short.form-control {
     margin-top: 5px;
-    width: 382px;
+    /*width: 382px;*/
     height: 50px;
     border-radius: 0 !important;
     border: 1px solid #ccc;
