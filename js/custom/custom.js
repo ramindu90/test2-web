@@ -48,8 +48,6 @@ $(document).ready(function() {
                 $(li).removeClass("collapsed");
                 $(li).attr("aria-expanded","false");
                 $(li).collapse('hide');
-                console.log("collapsing: "+li.outerHTML);
-
             }
         });
         console.log("ha ha");

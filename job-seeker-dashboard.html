@@ -36,6 +36,11 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/nav-bar-side-menu.css">
 
+    <link rel="stylesheet" href="css/leaflet/leaflet.css">
+    <link rel="stylesheet" href="css/leaflet/leaflet.markercluster.css">
+    <link rel="stylesheet" href="css/uikit/uikit.min.css"/>
+    <link rel="stylesheet" href="css/uikit/addons/uikit.addons.min.css"/>
+
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -101,152 +106,66 @@
                     <ul id="menu-content" class="menu-content collapse out">
 
                         <li data-toggle="collapse" data-target="#profile" class="collapsed menu-list-item">
-                            <a class="clickable-anchor"><i class="fa fa-user fa-lg"></i> Profile <span class="arrow"></span></a>
+                            <a class="clickable-anchor" onclick="changeMainView('profile-section')"><i class="fa fa-user fa-lg"></i> Profile <span class="arrow"></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="profile">
                             <li><a href="#personal-info-section"> Personal Info</a></li>
                             <li><a href="#contact-info-section"> Contact Info</a></li>
+                            <li><a href="#education-info-section"> Extra Info</a></li>
+                        </ul>
+
+                        <li data-toggle="collapse" data-target="#resume" class="collapsed menu-list-item">
+                            <a class="clickable-anchor" onclick="changeMainView('resume-section')"><i class="fa fa-file-text fa-lg"></i> My Resume <span class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="resume">
                             <li><a href="#education-info-section"> Education Info</a></li>
-                            <li><a href="#work-info-section"> Work Info</a></li>
+                            <li><a href="#work-info-section"> Experience Info</a></li>
+                            <li><a href="#skills-section"> Skills</a></li>
+                            <li><a href="#honors-awards-section"> Honors & Awards </a></li>
                         </ul>
 
-                        <li data-toggle="collapse" data-target="#products" class="collapsed menu-list-item">
-                            <a class="clickable-anchor"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>
-                        </li>
-                        <ul class="sub-menu collapse" id="products">
-                            <li><a href="#"> CSS3 Animation</a></li>
-                            <li><a href="#"> General</a></li>
-                            <li><a href="#"> Buttons</a></li>
-                            <li><a href="#"> Tabs & Accordions</a></li>
-                            <li><a href="#"> Typography</a></li>
-                            <li><a href="#"> FontAwesome</a></li>
-                            <li><a href="#"> Slider</a></li>
-                            <li><a href="#"> Panels</a></li>
-                            <li><a href="#"> Widgets</a></li>
-                            <li><a href="#"> Bootstrap Model</a></li>
-                        </ul>
-
-
-                        <li data-toggle="collapse" data-target="#service" class="collapsed menu-list-item">
-                            <a class="clickable-anchor"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
-                        </li>
-                        <ul class="sub-menu collapse" id="service">
-                            <li>New Service 1</li>
-                            <li>New Service 2</li>
-                            <li>New Service 3</li>
-                        </ul>
-
-
-                        <li data-toggle="collapse" data-target="#new" class="collapsed menu-list-item">
-                            <a class="clickable-anchor"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
-                        </li>
-                            <ul class="sub-menu collapse" id="new">
-                                <li>New New 1</li>
-                                <li>New New 2</li>
-                                <li>New New 3</li>
-                            </ul>
 
                         <li class="menu-list-item">
+                            <a class="clickable-anchor" onclick="changeMainView('short-listed-jobs-section')">
+                                <i class="fa fa-check fa-lg"></i> Short Listed Jobs
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="clickable-anchor" onclick="changeMainView('applied-jobs-section')">
+                                <i class="fa fa-briefcase fa-lg"></i> Applied Jobs
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="clickable-anchor" onclick="changeMainView('alerts-section')">
+                                <i class="fa fa-bell-o fa-lg"></i> Alerts
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="clickable-anchor" onclick="changeMainView('cv-cover-letter-section')">
+                                <i class="fa fa-file fa-lg"></i> CV and Cover Letter
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="clickable-anchor" onclick="changeMainView('change-password-section')">
+                                <i class="fa fa-key fa-lg"></i> Change Password
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
                             <a class="clickable-anchor">
-                                <i class="fa fa-users fa-lg"></i> Users
+                                <i class="fa fa-sign-out fa-lg"></i> Logout
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="col-md-9" id="resume-section">
+
+        <div class="col-md-9" id="resume-section" style="display: none">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="main-heading">
-                    <h3><strong>WELCOME RAMINDU</strong></h3>
+                    <h3><strong>RESUME SECTION</strong></h3>
                 </div>
             </div>
-
-            <section class="finder-profile-info" id="personal-info-section">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="main-heading">
-                        <h4><strong>MY PROFILE</strong></h4>
-                    </div>
-                </div>
-                <div class="main-heading col-md-5">
-                    <div class="row">
-                        <div class="col-md-1">
-                            <img src="img/login/defaultProfileImg.jpeg" alt="profile view" style="width:125px;height:125px; display: inline-block;"/>
-                        </div>
-                        <div class="col-md-1 col-md-offset-4">
-                            <button class="navbar-btn nav-button wow browse-btn" data-wow-delay="0.6s"><i class="fa fa-upload"></i> Browse</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <label for="full-name">Full Name</label>
-                    <input type="text" class="resume-text-input-long general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label for="full-name">Job Title</label>
-                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label for="full-name">Minimum Salary</label>
-                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 specialism-search">
-                    <label for="full-name">Add Specialism</label>
-                    <select class="resume-text-select-short form-control selectpicker" data-show-subtext="true" data-live-search="true">
-                        <option value="" disabled selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label for="full-name">Added Specialisms</label>
-                    <ol class="breadcrumb resume-text-input-short general-text-input form-control" style="margin-bottom: 5px;">
-                        <li>Home</li>
-                        <li>Library</li>
-                        <li>Data</li>
-                    </ol>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <label for="description">Description</label>
-                    <div class="larger-editor" id="description">
-                        Hello my name is Mark William Connor and I’m a Web Designer & Web Developer from Melbourne, Australia. In pharetra orci dignissim, blandit mi semper, ultricies diam. Suspendisse malesuada suscipit nunc non volutpat. Sed porta nulla id orci laoreet tempor non consequat enim. Sed vitae aliquam velit. Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. Mauris nec erat ut libero vulputate pulvinar.
-                        Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. Mauris nec erat ut libero vulputate pulvinar.
-                    </div>
-                </div>
-            </section>
-            <section class="contact-info" id="contact-info-section">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="main-heading">
-                        <h4><strong>CONTACT INFORMATION</strong></h4>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label for="full-name">Phone Number</label>
-                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label for="full-name">Email</label>
-                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label for="full-name">Country</label>
-                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <label for="full-name">City</label>
-                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <label for="description">Complete Address</label>
-                    <div class="larger-editor" id="complete-address">
-
-                    </div>
-                </div>
-
-            </section>
             <section class="educational-info" id="education-info-section">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="main-heading">
@@ -255,8 +174,11 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="educationalInfoDiv" style="display: none; overflow-x:auto;">
-                    <table id="educationInfoTable" style="width:100%"   class="manage-table resumes responsive-table stacktable large-only">
-                    </table>
+                    <div class="table-responsive">
+                        <table id="educationInfoTable" class="table information-table">
+
+                        </table>
+                    </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -298,8 +220,11 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="workInfoDiv" style="display: none; overflow-x:auto;">
-                    <table id="workInfoTable" style="width:100%"   class="manage-table resumes responsive-table stacktable large-only">
-                    </table>
+                    <div class="table-responsive">
+                        <table id="workInfoTable" class="table information-table">
+
+                        </table>
+                    </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -325,6 +250,201 @@
                     <button class="navbar-btn nav-button wow add-education-btn" data-wow-delay="0.6s" onclick="addWorkInfo()"><i class="fa fa-plus-circle"></i> Experience</button>
                 </div>
             </section>
+        </div>
+
+        <div class="col-md-9" id="short-listed-jobs-section" style="display: none">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="main-heading">
+                    <h3><strong>SHORT LISTED JOBS SECTION</strong></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9" id="applied-jobs-section" style="display: none">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="main-heading">
+                    <h3><strong>APPLIED JOBS SECTION</strong></h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-9" id="alerts-section" style="display: none">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="main-heading">
+                    <h3><strong>ALERTS</strong></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9" id="cv-cover-letter-section" style="display: none">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="main-heading">
+                    <h3><strong>CV AND COVER LETTER</strong></h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-9" id="change-password-section" style="display: none">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="main-heading">
+                    <h3><strong>CHANGE PASSWORD</strong></h3>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <label for="full-name">Old Password</label>
+                <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <label for="full-name">New Password</label>
+                <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <label for="full-name">Confirm Password</label>
+                <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <button class="navbar-btn nav-button wow add-education-btn" data-wow-delay="0.6s" onclick="addEducationalInfo()"><i class="icon-save"></i> Save</button>
+            </div>
+
+        </div>
+        <div class="col-md-9" id="profile-section"  style="display: block">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="main-heading">
+                    <h3><strong>WELCOME RAMINDU</strong></h3>
+                </div>
+            </div>
+
+            <section class="finder-profile-info" id="personal-info-section" style="display: block">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="main-heading">
+                        <h4><strong>MY PROFILE</strong></h4>
+                    </div>
+                </div>
+                <div class="main-heading col-md-5">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img src="img/login/defaultProfileImg.jpeg" alt="profile view" style="width:125px;height:125px; display: inline-block;"/>
+                        </div>
+                        <div class="col-md-1 col-md-offset-4">
+                            <button class="navbar-btn nav-button wow browse-btn" data-wow-delay="0.6s"><i class="fa fa-upload"></i> Browse</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" class="resume-text-input-long general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Job Title</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Minimum Salary</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 specialism-search">
+                    <label for="full-name">Add Specialism</label>
+                    <select class="resume-text-select-short form-control main-search selectpicker" data-show-subtext="true"
+                            data-live-search="true">
+                        <option value="" disabled selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Added Specialisms</label>
+                    <ol class="breadcrumb resume-text-input-short general-text-input form-control" style="margin-bottom: 5px;">
+                        <li>Home</li>
+                        <li>Library</li>
+                        <li>Data</li>
+                    </ol>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 specialism-search">
+                    <label for="full-name">Age</label>
+                    <select class="resume-text-select-short form-control main-search selectpicker" data-show-subtext="true"
+                            data-live-search="true">
+                        <option value="" disabled selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 specialism-search">
+                    <label for="full-name">Experience</label>
+                    <select class="resume-text-select-short form-control main-search selectpicker" data-show-subtext="true"
+                            data-live-search="true">
+                        <option value="" disabled selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label for="description">Description</label>
+                    <div class="larger-editor" id="description">
+                        Hello my name is Mark William Connor and I’m a Web Designer & Web Developer from Melbourne, Australia. In pharetra orci dignissim, blandit mi semper, ultricies diam. Suspendisse malesuada suscipit nunc non volutpat. Sed porta nulla id orci laoreet tempor non consequat enim. Sed vitae aliquam velit. Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. Mauris nec erat ut libero vulputate pulvinar.
+                        Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. Mauris nec erat ut libero vulputate pulvinar.
+                    </div>
+                </div>
+            </section>
+            <section class="contact-info" id="contact-info-section">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="main-heading">
+                        <h4><strong>CONTACT INFORMATION</strong></h4>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Phone Number</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Email</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Country</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">City</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label for="description">Complete Address</label>
+                    <div class="larger-editor" id="complete-address">
+
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label for="full-name">Find on Map</label>
+                    <input type="text" class="resume-text-input-long general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Longitude</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label for="full-name">Latitude</label>
+                    <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="full-name" placeholder="Full name" value="" />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div id="finder-map" style="height: 300px; margin-top: 10px;">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-9" id="update-button-section"  style="display: block;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="navbar-btn nav-button wow update-education-btn" data-wow-delay="0.6s" onclick=""><i class="fa fa-floppy-o"></i> Update Information</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -535,6 +655,15 @@
 <script src="js/custom/socialLogin.js"></script>
 <script src="js/custom/custom.js"></script>
 <script src="js/custom/jobFinderInfoAdd.js"></script>
+
+<!--<script src="js/leaflet/leaflet-search-control.js"></script>-->
+<!--<script src="js/leaflet/leaflet.featuregroup.subgroup.js"></script>-->
+<script src="js/leaflet/leaflet.js"></script>
+<script src="js/leaflet/leaflet.markercluster.js"></script>
+<script src="js/leaflet/marker.js"></script>
+<script src="js/leaflet/marker.rotate.js"></script>
+<script src="js/uikit/uikit.min.js"></script>
+<script src="js/uikit/addons/notify.min.js"></script>
 
 </body>
 </html>
