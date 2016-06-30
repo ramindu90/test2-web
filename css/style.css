@@ -500,12 +500,12 @@ background-color: #0096cc;
   font-size: 15px;
 }
 
-.table-responsive {
-  margin-bottom: 15px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 100%;
-}
+/*.table-responsive {*/
+  /*margin-bottom: 15px;*/
+  /*overflow-x: auto;*/
+  /*overflow-y: hidden;*/
+  /*width: 100%;*/
+/*}*/
 .testimonial{
 	position: relative;
 	margin-top: 50px;

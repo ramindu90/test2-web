@@ -7,12 +7,12 @@ var currentItemsInEducationalInfo = 0;
 var currentItemsInWorkInfo = 0;
 
 
-function changeFinderInformationAddView(changingView){
-    if('toPersonalInfoDiv' == changingView){
+function changeFinderInformationAddView(changingView) {
+    if ('toPersonalInfoDiv' == changingView) {
         document.getElementById('personalInformationDiv').style.display = 'block';
         document.getElementById('educationalInfoDiv').style.display = 'none';
         document.getElementById('tab3').style.display = 'none';
-    } else if("educationalInfoDiv" == changingView){
+    } else if ("educationalInfoDiv" == changingView) {
         document.getElementById('educationalInfoDiv').style.display = 'block';
         document.getElementById('personalInformationDiv').style.display = 'none';
         document.getElementById('tab3').style.display = 'none';
@@ -20,25 +20,44 @@ function changeFinderInformationAddView(changingView){
 }
 
 
-
-function addEducationalInfo(){
+function addEducationalInfo() {
     var item = {};
     var table = document.getElementById("educationInfoTable");
-    if(currentItemsInEducationalInfo == 0){
-        var headRow = document.createElement("tr");
-        headRow.setAttribute("id", "eduTableHeaderId");
-        // headRow.innerHTML = "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">School/University</h5></th>" +
-        //                     "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">Degree Level</h5></th>" +
-        //                     "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">Year</h5></th>" +
-        //                     "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">remove</h5></th>";
+    var tableBody;
+    if (currentItemsInEducationalInfo == 0) {
+        tableBody = document.createElement("tbody");
+        tableBody.setAttribute("id", "educationTableBody");
+        var container = document.getElementById("educationalInfoDiv");
+        container.style.display = 'inline';
+        table.appendChild(tableBody);
 
-        headRow.innerHTML = "<th>School/University</th>" +
-            "<th>Degree Level</th>" +
-            "<th>Year</th>" +
-            "<th>remove</th>";
-        table.appendChild(headRow);
+        // var headRow = document.createElement("tr");
+        // headRow.setAttribute("id", "eduTableHeaderId");
+        // // headRow.innerHTML = "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">School/University</h5></th>" +
+        // //                     "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">Degree Level</h5></th>" +
+        // //                     "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">Year</h5></th>" +
+        // //                     "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">remove</h5></th>";
+        //
+        // headRow.innerHTML = "<th>School/University</th>" +
+        //     "<th>Degree Level</th>" +
+        //     "<th>Year</th>" +
+        //     "<th>remove</th>";
+        //
+        // tableBody.appendChild(headRow);
+    } else {
+        tableBody = document.getElementById("educationTableBody");
     }
     currentItemsInEducationalInfo++;
+    var dataRow = document.createElement("tr");
+    dataRow.setAttribute("id", "educationRow_" + currentItemsInEducationalInfo);
+
+    console.log(currentItemsInEducationalInfo);
+
+    if (currentItemsInEducationalInfo % 2 == 1) {
+        dataRow.setAttribute("class", "odd");
+    } else {
+        dataRow.setAttribute("class", "even");
+    }
     item["schoolOrUni"] = document.getElementById('school-university').value;
     item["year"] = document.getElementById('school-uni-year').value;
     var degreeLevelSelector = document.getElementById("degree-level");
@@ -46,34 +65,34 @@ function addEducationalInfo(){
     item["fieldOfStudy"] = document.getElementById('field-of-study').value;
     item["grade"] = document.getElementById('grade-s').value;
     item["key"] = "educationRow_" + currentItemsInEducationalInfo;
-    
-    var dataRow = document.createElement("tr");
-    dataRow.setAttribute("id", "educationRow_" + currentItemsInEducationalInfo);
-    // dataRow.innerHTML = "<td class=\"three columns\"><h5 style=\"text-align:center;float:left;\"/>" + item["schoolOrUni"] + "</h5></td>" +
-    //                     "<td class=\"three columns\"><h5 style=\"text-align:center;float:left;\">" + item["degreeLevel"] + "</h5></td>" +
-    //                     "<td class=\"three columns\"><h5 style=\"text-align:center;float:left;\">" + item["year"] + "</h5></td>";
 
-    dataRow.innerHTML = "<td style=\"text-align:center;\">" + item["schoolOrUni"] + "</td>" +
-        "<td style=\"text-align:center;\">" + item["degreeLevel"] + "</td>" +
-        "<td style=\"text-align:center;\">" + item["year"] + "</td>";
+    dataRow.innerHTML = "<td style=\"text-align:center;\"><p>" + item["schoolOrUni"] + "</p></td>" +
+        "<td style=\"text-align:center;\"><p>" + item["degreeLevel"] + "</p></td>" +
+        "<td style=\"text-align:center;\"><p>" + item["year"] + "</p></td>" +
+        "<td style=\"text-align:center;\"></td><p class=\"clickable-anchor\" " +
+                                                "onclick='removeEducationalInfo(" + currentItemsInEducationalInfo + ")'>" +
+                                                    "<i class=\"fa fa-times\"></i>" +
+                                                "remove</p></td>";
 
 
-    var dataCell = document.createElement("td");
-    dataCell.setAttribute("style", "text-align:center");
-    var img = document.createElement("img");
-    var a = document.createElement("a");
-    a.setAttribute("href", "#");
-    a.setAttribute("onclick", "return false;");
-    img.setAttribute("src", "img/common/remove_icon.png");
-    img.setAttribute("alt", "remove icon");
-    img.setAttribute("class", "button");
-    img.setAttribute("style", "width:25px;height:25px;float: left;");
-    img.setAttribute("onclick", "removeEducationalInfo("+currentItemsInEducationalInfo+")");
-    a.appendChild(img);
-    dataCell.appendChild(a);
-    dataRow.appendChild(dataCell);
 
-    table.appendChild(dataRow);
+    // var dataCell = document.createElement("td");
+    // dataCell.setAttribute("style", "text-align:center");
+    // var img = document.createElement("img");
+    // var a = document.createElement("a");
+    // a.setAttribute("href", "#");
+    // a.setAttribute("onclick", "return false;");
+    // img.setAttribute("src", "img/common/remove_icon.png");
+    // img.setAttribute("alt", "remove icon");
+    // img.setAttribute("class", "button");
+    // img.setAttribute("style", "width:25px;height:25px;float: left;");
+    // img.setAttribute("onclick", "removeEducationalInfo(" + currentItemsInEducationalInfo + ")");
+    // a.appendChild(img);
+    // dataCell.appendChild(a);
+    // dataRow.appendChild(dataCell);
+
+    tableBody.appendChild(dataRow);
+
 
     educationalInfo.push(item);
     document.getElementById('school-university').value = "";
@@ -87,31 +106,31 @@ function addEducationalInfo(){
 
 }
 
-function removeEducationalInfo(currentItemId){
+function removeEducationalInfo(currentItemId) {
     currentItemsInEducationalInfo--;
-    if(currentItemsInEducationalInfo == 0){
-        var el = document.getElementById('eduTableHeaderId');
-        el.parentNode.removeChild(el);
+    if (currentItemsInEducationalInfo == 0) {
+        // var el = document.getElementById('eduTableHeaderId');
+        // el.parentNode.removeChild(el);
         var container = document.getElementById("educationalInfoDiv");
         container.style.display = 'none';
     }
     el = document.getElementById("educationRow_" + currentItemId);
     el.parentNode.removeChild(el);
 
-    for(var i = 0; i < educationalInfo.length; i++) {
+    for (var i = 0; i < educationalInfo.length; i++) {
         var a = educationalInfo[i];
 
-        if(a.key === "educationRow_" + currentItemId) {
+        if (a.key === "educationRow_" + currentItemId) {
             educationalInfo.splice(i, 1);
             break;
         }
     }
 }
 
-function addWorkInfo(){
+function addWorkInfo() {
     var item = {};
     var table = document.getElementById("workInfoTable");
-    if(currentItemsInEducationalInfo == 0){
+    if (currentItemsInEducationalInfo == 0) {
         var headRow = document.createElement("tr");
         headRow.setAttribute("id", "workTableHeaderId");
         // headRow.innerHTML = "<th class=\"three columns\"><h5 style=\"text-align:left;float:left;\">School/University</h5></th>" +
@@ -153,7 +172,7 @@ function addWorkInfo(){
     img.setAttribute("alt", "remove icon");
     img.setAttribute("class", "button");
     img.setAttribute("style", "width:25px;height:25px;float: left;");
-    img.setAttribute("onclick", "removeWorkInfo("+currentItemsInWorkInfo+")");
+    img.setAttribute("onclick", "removeWorkInfo(" + currentItemsInWorkInfo + ")");
     a.appendChild(img);
     dataCell.appendChild(a);
     dataRow.appendChild(dataCell);
@@ -171,9 +190,9 @@ function addWorkInfo(){
 
 }
 
-function removeWorkInfo(currentItemId){
+function removeWorkInfo(currentItemId) {
     currentItemsInEducationalInfo--;
-    if(currentItemsInEducationalInfo == 0){
+    if (currentItemsInEducationalInfo == 0) {
         var el = document.getElementById('workTableHeaderId');
         el.parentNode.removeChild(el);
 
@@ -183,10 +202,10 @@ function removeWorkInfo(currentItemId){
     el = document.getElementById("educationRow_" + currentItemId);
     el.parentNode.removeChild(el);
 
-    for(var i = 0; i < educationalInfo.length; i++) {
+    for (var i = 0; i < educationalInfo.length; i++) {
         var a = educationalInfo[i];
 
-        if(a.key === "educationRow_" + currentItemId) {
+        if (a.key === "educationRow_" + currentItemId) {
             educationalInfo.splice(i, 1);
             break;
         }
