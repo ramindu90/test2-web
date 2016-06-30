@@ -1,6 +1,39 @@
-body{
-	font-family: 'Open Sans', sans-serif, "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700,300");
+
+/* Main Font */
+body {
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 27px;
+    color: #666;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
+
+body,
+textarea,
+.widget-text h5,
+h3.centered-headline span,
+select {
+    font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Secondary Font */
+h1, h2, h3, h4, h5, h6,
+.button,
+button,
+#navigation, .infobox a,
+.pagination-container, .upload-btn,
+.skills span,
+.app-content .info span,
+.tabs-nav li a, .reply,
+.ui-accordion .ui-accordion-header,
+.trigger a, .caption.title, .caption .slider-button,
+.counter, .counter-box i, a.menu-trigger,
+#style-switcher h2, .resume-table strong
+{ font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*
 0096cc
@@ -89,6 +122,7 @@ background-color: #0096cc;
   color: #000000;
   font-size: 17px;
   padding: 8px 20px;
+    text-transform: uppercase;
   /*border-radius: 2px;*/
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
