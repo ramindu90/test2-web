@@ -198,3 +198,44 @@ a.clickable-anchor:hover {
     margin-left: 130px;
     /*margin-right: 140px;*/
 }
+
+.information-table.table tr td a {
+    color: #929090;
+    /* background: #0096cc; */
+    background-color: #ffffff;
+    padding: 5px 5px;
+    /* border-radius: 5px; */
+    font-size: 13px;
+    text-decoration: none;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    border: 1px solid #929090;
+}
+
+.information-table.table tr:hover td a:hover {
+    /* background: #fff; */
+    /* color: #0096cc; */
+}
+
+.information-table.table tr:hover td a {
+    /* background: #00aaa5; */
+}
+
+.information-table.table  th {
+    border-bottom: 3px solid #e9e9e9;
+}
+
+.information-table.table  tr:hover th {
+     background: #aa2633;
+}
+
+.update-education-btn {
+    display: block;
+    width: 250px;
+    border-left: 10px;
+    background-color: #000000;
+    color: #ffffff;
+}
