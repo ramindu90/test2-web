@@ -241,9 +241,7 @@ a.clickable-anchor:hover {
     color: #ffffff;
 }
 .update-information-btn {
-    display: block;
     width: 300px;
-    border-left: 10px;
     background-color: #000000;
     color: #ffffff;
 }
