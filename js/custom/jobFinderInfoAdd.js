@@ -7,6 +7,15 @@ var currentItemsInEducationalInfo = 0;
 var currentItemsInWorkInfo = 0;
 var map;
 
+var profileSection = "profile-section";
+var resumeSection = "resume-section";
+var shortListedJobsSection = "short-listed-jobs-section";
+var appliedJobsSection = "applied-jobs-section";
+var alertsSection = "alerts-section";
+var cvCoverLetterSection = "cv-cover-letter-section";
+var changePasswordSection = "change-password-section";
+
+
 function changeFinderInformationAddView(changingView) {
     if ('toPersonalInfoDiv' == changingView) {
         document.getElementById('personalInformationDiv').style.display = 'block';
@@ -254,23 +263,67 @@ function removeWorkInfo(currentItemId) {
     }
 }
 
-
 function changeMainView(section){
     var sectionElement = document.getElementById(section);
 
-    document.getElementById("profile-section").style.display = 'none';
-    document.getElementById("resume-section").style.display = 'none';
-    document.getElementById("short-listed-jobs-section").style.display = 'none';
-    document.getElementById("applied-jobs-section").style.display = 'none';
-    document.getElementById("alerts-section").style.display = 'none';
-    document.getElementById("cv-cover-letter-section").style.display = 'none';
-    document.getElementById("change-password-section").style.display = 'none';
+    document.getElementById(profileSection).style.display = 'none';
+    document.getElementById(resumeSection).style.display = 'none';
+    document.getElementById(shortListedJobsSection).style.display = 'none';
+    document.getElementById(appliedJobsSection).style.display = 'none';
+    document.getElementById(alertsSection).style.display = 'none';
+    document.getElementById(cvCoverLetterSection).style.display = 'none';
+    document.getElementById(changePasswordSection).style.display = 'none';
 
     if(sectionElement){
         sectionElement.style.display = 'block';
-
     } 
 }
+
+function changeSubView(section, subSection) {
+    if('block' != document.getElementById(section).style.display) {
+        document.getElementById(profileSection).style.display = 'none';
+        document.getElementById(resumeSection).style.display = 'none';
+        document.getElementById(shortListedJobsSection).style.display = 'none';
+        document.getElementById(appliedJobsSection).style.display = 'none';
+        document.getElementById(alertsSection).style.display = 'none';
+        document.getElementById(cvCoverLetterSection).style.display = 'none';
+        document.getElementById(changePasswordSection).style.display = 'none';
+
+        document.getElementById(section).style.display = 'block';
+    }
+
+    document.getElementById(profileSection + "-personal-info").style.display = 'none';
+    document.getElementById(profileSection + "-contact-info").style.display = 'none';
+    document.getElementById(resumeSection + "-education-info").style.display = 'none';
+    document.getElementById(resumeSection + "-work-info").style.display = 'none';
+
+    if(profileSection == section) {
+        if(profileSection + "-personal-info" == subSection) {
+            document.getElementById(profileSection + "-personal-info").style.display = 'block';
+        } else {
+            document.getElementById(profileSection + "-contact-info").style.display = 'block';
+        }
+    }
+    else if(resumeSection == section) {
+        if(resumeSection + "-education-info" == subSection) {
+            document.getElementById(resumeSection + "-education-info").style.display = 'block';
+        } else {
+            document.getElementById(resumeSection + "-work-info").style.display = 'block';
+        }
+    } else if (shortListedJobsSection == section) {
+
+    } else if (appliedJobsSection == section) {
+
+    } else if (alertsSection == section) {
+
+    } else if (cvCoverLetterSection == section) {
+
+    } else if (changePasswordSection == section) {
+
+    }
+
+}
+
 $(document).ready(function() {
     initializeMap();
 });
@@ -313,24 +366,24 @@ function success(position) {
     var browserLongitude = position.coords.longitude;
     map.setView([browserLatitude, browserLongitude]);
     map.setZoom(13);
-
-
-    $.UIkit.notify({
-        message: "Map view set to browser's location",
-        status: 'info',
-        timeout: 2000,
-        pos: 'top-center'
-    });
+    //
+    //
+    // $.UIkit.notify({
+    //     message: "Map view set to browser's location",
+    //     status: 'info',
+    //     timeout: 2000,
+    //     pos: 'top-center'
+    // });
 }
 
 function error(e) {
     console.log('Error occurred. Error code: ' + e.code);
-     $.UIkit.notify({
-         message: "Unable to find browser location!",
-         status: 'warning',
-         timeout: 2000,
-         pos: 'top-center'
-     });
+     // $.UIkit.notify({
+     //     message: "Unable to find browser location!",
+     //     status: 'warning',
+     //     timeout: 2000,
+     //     pos: 'top-center'
+     // });
  }
 
 

@@ -105,23 +105,23 @@
 
                     <ul id="menu-content" class="menu-content collapse out">
 
-                        <li data-toggle="collapse" data-target="#profile" class="collapsed menu-list-item">
+                        <li data-toggle="collapse" data-target="#profile" class="collapsed menu-list-item" id="profile-section-collapse-id">
                             <a class="clickable-anchor" onclick="changeMainView('profile-section')"><i class="fa fa-user fa-lg"></i> Profile <span class="arrow"></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="profile">
-                            <li><a href="#personal-info-section"> Personal Info</a></li>
-                            <li><a href="#contact-info-section"> Contact Info</a></li>
-                            <li><a href="#education-info-section"> Extra Info</a></li>
+                            <li id="profile-section-personal-info-collapse-id"><a class="clickable-anchor"> Personal Info</a></li>
+                            <li id="profile-section-contact-info-collapse-id"><a class="clickable-anchor"> Contact Info</a></li>
+                            <!--<li><a href="#education-info-section"> Extra Info</a></li>-->
                         </ul>
 
-                        <li data-toggle="collapse" data-target="#resume" class="collapsed menu-list-item">
+                        <li data-toggle="collapse" data-target="#resume" class="collapsed menu-list-item" id="resume-section-collapse-id">
                             <a class="clickable-anchor" onclick="changeMainView('resume-section')"><i class="fa fa-file-text fa-lg"></i> My Resume <span class="arrow"></span></a>
                         </li>
                         <ul class="sub-menu collapse" id="resume">
-                            <li><a href="#education-info-section"> Education Info</a></li>
-                            <li><a href="#work-info-section"> Experience Info</a></li>
-                            <li><a href="#skills-section"> Skills</a></li>
-                            <li><a href="#honors-awards-section"> Honors & Awards </a></li>
+                            <li id="resume-section-education-info-collapse-id"><a class="clickable-anchor"> Education Info</a></li>
+                            <li id="resume-section-work-info-collapse-id"><a class="clickable-anchor"> Experience Info</a></li>
+                            <!--<li><a href="#skills-section"> Skills</a></li>-->
+                            <!--<li><a href="#honors-awards-section"> Honors & Awards </a></li>-->
                         </ul>
 
 
@@ -166,7 +166,7 @@
                     <h3><strong>RESUME SECTION</strong></h3>
                 </div>
             </div>
-            <section class="educational-info" id="education-info-section">
+            <section class="educational-info" id="resume-section-education-info">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="main-heading">
                         <h4><strong>EDUCATION INFORMATION</strong></h4>
@@ -207,13 +207,12 @@
                     <label for="full-name">Grade/s</label>
                     <input type="text" class="resume-text-input-short general-text-input form-control" name="username" id="grade-s" placeholder="Field" value="" />
                 </div>
-
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <button class="navbar-btn nav-button wow add-education-btn" data-wow-delay="0.6s" onclick="addEducationalInfo()"><i class="fa fa-plus-circle"></i> Education Details</button>
+                    <button class="navbar-btn nav-button add-education-btn" onclick="addEducationalInfo()"><i class="fa fa-plus-circle"></i> Education Information</button>
                 </div>
             </section>
-            <section class="work-info" id="work-info-section">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <section class="work-info" id="resume-section-work-info">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-section-dashboard">
                     <div class="main-heading">
                         <h4><strong>WORKING EXPERIENCE</strong></h4>
                     </div>
@@ -247,7 +246,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <button class="navbar-btn nav-button wow add-education-btn" data-wow-delay="0.6s" onclick="addWorkInfo()"><i class="fa fa-plus-circle"></i> Experience</button>
+                    <button class="navbar-btn nav-button wow add-education-btn" data-wow-delay="0.6s" onclick="addWorkInfo()"><i class="fa fa-plus-circle"></i> Working Experience</button>
                 </div>
             </section>
         </div>
@@ -316,7 +315,7 @@
                 </div>
             </div>
 
-            <section class="finder-profile-info" id="personal-info-section" style="display: block">
+            <section class="finder-profile-info" id="profile-section-personal-info">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="main-heading">
                         <h4><strong>MY PROFILE</strong></h4>
@@ -384,8 +383,8 @@
                     </div>
                 </div>
             </section>
-            <section class="contact-info" id="contact-info-section">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <section class="contact-info" id="profile-section-contact-info">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 second-section-dashboard">
                     <div class="main-heading">
                         <h4><strong>CONTACT INFORMATION</strong></h4>
                     </div>
