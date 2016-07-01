@@ -478,6 +478,11 @@ background-color: #0096cc;
 .table > tbody > tr > td.tbl-logo{
 	padding-right: 0px
 }
+
+.job-icons span {
+	margin-bottom: 8px;
+}
+
 .table > tbody > tr > td.tbl-apply{
 	padding-right: 10px;
 	padding-left: 0px;
