@@ -286,7 +286,7 @@ function initializeMap(){
     }
 
     map = L.map("finder-map", {
-        zoom: 14,
+        zoom: 13,
         center: [6.9218386,79.8562055],
         layers: [defaultOSM],
         zoomControl: false,
@@ -295,7 +295,14 @@ function initializeMap(){
         maxNativeZoom: 20
     });
 
-    // navigator.geolocation.getCurrentPosition(success, error);
+    if (navigator.geolocation) {
+        console.log('Geolocation is supported!');
+        navigator.geolocation.getCurrentPosition(success, error);
+    }
+    else {
+        console.log('Geolocation is not supported for this Browser/OS version yet.');
+    }
+
 
 }
 
@@ -316,12 +323,13 @@ function success(position) {
     });
 }
 
-function error() {
+function error(e) {
+    console.log('Error occurred. Error code: ' + e.code);
      $.UIkit.notify({
-     message: "Unable to find browser location!",
-     status: 'warning',
-     timeout: 2000,
-     pos: 'top-center'
+         message: "Unable to find browser location!",
+         status: 'warning',
+         timeout: 2000,
+         pos: 'top-center'
      });
  }
 
