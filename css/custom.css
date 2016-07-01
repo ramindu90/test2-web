@@ -107,9 +107,10 @@
 
 .browse-btn {
     display: block;
-    width: 125px;
+    width: 140px;
     border-left: 10px;
     margin-top: 40px;
+    margin-left: 20px;
 }
 
 label {
@@ -235,6 +236,13 @@ a.clickable-anchor:hover {
 .update-education-btn {
     display: block;
     width: 250px;
+    border-left: 10px;
+    background-color: #000000;
+    color: #ffffff;
+}
+.update-information-btn {
+    display: block;
+    width: 300px;
     border-left: 10px;
     background-color: #000000;
     color: #ffffff;
