@@ -261,3 +261,21 @@ a.clickable-anchor:hover {
 .second-section-dashboard {
     margin-top: 20px;
 }
+
+#main-page-jobs-table.table tr.odd{
+    background: #fafafa
+}
+#main-page-jobs-table.table tr.even{
+    background: #FFFFFF
+}
+#main-page-jobs-table.table tr:hover{
+    border-bottom: 1px solid #0096cc;
+    border-top: 1px solid #0096cc;
+    background: #f8ffff;
+    color: #666666
+}
+
+#main-page-jobs-table.table tr{
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
