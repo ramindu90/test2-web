@@ -418,8 +418,8 @@ background-color: #0096cc;
 .jobs{
 	margin-bottom: 10px;
 	margin-top: 20px;
-	margin-left: 130px;
-	margin-right: 130px;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 .table tr{
 
@@ -429,22 +429,23 @@ background-color: #0096cc;
 	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
 }
-.table tr.hide-jobs{
-	display: none;
-}
+/*.table tr.hide-jobs{*/
+	/*display: none;*/
+/*}*/
 .table tr td h4{
 	font-weight: 700;
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
-.table tr td{
+/*.table tr td{
 	padding:6px;
-}
+}*/
 .table tr td h4 span{
 	font-weight: 300;
-	font-size: 14px
+	font-size: 14px;
 }
 .table tr td p i{
-	color: #0096cc
+	color: #d3d3d3;
+	margin-right: 3px;
 }
 .table tr td p{
 	font-size: 13px
@@ -475,20 +476,21 @@ background-color: #0096cc;
 	vertical-align: middle;
 	padding: 3px;
 }
-.table > tbody > tr > td.tbl-logo{
-	padding-right: 0px
-}
+/*.table > tbody > tr > td.tbl-logo{*/
+	/*padding-right: 0px*/
+/*}*/
 
 .job-icons span {
 	margin-bottom: 8px;
 }
 
 .table > tbody > tr > td.tbl-apply{
-	padding-right: 10px;
-	padding-left: 0px;
+	padding-right: 0px;
+	padding-left: 10px;
+	width: 100%;
 }
 .table > tbody > tr > td.tbl-title{
-	padding-left: 5px
+	padding-left: 15px
 }
 .table tr.odd{
 	background: #F9F9F9
