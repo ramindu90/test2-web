@@ -186,12 +186,12 @@ function addWorkInfo() {
         headRow.innerHTML = "<th>Work Place</th>" +
             "<th>Designation</th>" +
             "<th>No of Years</th>" +
-            "<th>remove</th>";
+            "<th>Action</th>";
         tableBody.appendChild(headRow);
     } else {
         tableBody = document.getElementById("workTableBody");
     }
-    currentItemsInEducationalInfo++;
+    currentItemsInWorkInfo++;
     var dataRow = document.createElement("tr");
     dataRow.setAttribute("id", "workRow_" + currentItemsInWorkInfo);
 

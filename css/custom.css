@@ -227,12 +227,17 @@ a.clickable-anchor:hover {
     /* background: #00aaa5; */
 }
 
+.information-table.table  {
+     background: #e9e9e9;
+     border: 1px solid #929090;
+}
+
 .information-table.table  th {
-    border-bottom: 3px solid #e9e9e9;
+    border-bottom: 1px solid #929090;
 }
 
 .information-table.table  tr:hover th {
-     background: #aa2633;
+     /*background: #aa2633;*/
 }
 
 .update-education-btn {
@@ -256,9 +261,3 @@ a.clickable-anchor:hover {
 .second-section-dashboard {
     margin-top: 20px;
 }
-
-span.full-time { background-color: #186fc9; }
-span.part-time { background-color: #f1630d; }
-span.freelance { background-color: #53b427; }
-span.internship { background-color: #e1d123; }
-span.temporary { background-color: #e12335; }
