@@ -499,8 +499,8 @@ background-color: #0096cc;
 	background: #F4FFFF
 }
 .table tr:hover{
-	/*background: #0096cc;*/
-	/*color: #fff*/
+	background: #0096cc;
+	color: #fff
 }
 
 .more-jobs{
