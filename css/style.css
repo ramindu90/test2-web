@@ -464,7 +464,7 @@ background-color: #0096cc;
 	transition: all 0.1s ease-in-out;
 }
 .table tr:hover td a{
-	background: #00aaa5
+	/*background: #00aaa5*/
 }
 .table tr:hover td a:hover{
 	background: #fff;
@@ -497,8 +497,8 @@ background-color: #0096cc;
 	background: #F4FFFF
 }
 .table tr:hover{
-	background: #0096cc;
-	color: #fff
+	/*background: #0096cc;*/
+	/*color: #fff*/
 }
 
 .more-jobs{
