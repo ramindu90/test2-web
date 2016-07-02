@@ -256,3 +256,9 @@ a.clickable-anchor:hover {
 .second-section-dashboard {
     margin-top: 20px;
 }
+
+span.full-time { background-color: #186fc9; }
+span.part-time { background-color: #f1630d; }
+span.freelance { background-color: #53b427; }
+span.internship { background-color: #e1d123; }
+span.temporary { background-color: #e12335; }
