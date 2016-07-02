@@ -255,6 +255,9 @@ a.clickable-anchor:hover {
     color: #ffffff;
 }
 
+.job-icons span {
+    margin-bottom: 8px;
+}
 .second-section-dashboard {
     margin-top: 20px;
 }
