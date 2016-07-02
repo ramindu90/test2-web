@@ -279,3 +279,73 @@ a.clickable-anchor:hover {
     border-bottom: 1px solid transparent;
     border-top: 1px solid transparent;
 }
+
+
+.job-type-btn {
+    border: medium none;
+    border-radius: 2px;
+    color: #fff;
+    float: right;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    min-width: 115px;
+    padding: 1px 15px;
+    text-align: center;
+}
+
+
+#main-page-jobs-table .job-type-green {
+    border:solid 1px #478723;
+    color:#478723;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
+
+#main-page-jobs-table a.job-type-green:hover {
+    border:solid 1px #6ab73f;
+    color:#6ab73f;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
+
+#main-page-jobs-table .job-type-blue {
+    border:solid 1px #4288c9;
+    color:#4288c9;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
+
+#main-page-jobs-table a.job-type-blue:hover {
+    border:solid 1px #59afff;
+    color:#59afff;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
+
+#main-page-jobs-table .job-type-red {
+    border:solid 1px #ef4b39;
+    color:#ef4b39;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
+
+#main-page-jobs-table a.job-type-red:hover {
+    border:solid 1px #ff9084;
+    color:#ff9084;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
+#main-page-jobs-table .job-type-dark-yellow {
+    border:solid 1px #dc932b;
+    color:#dc932b;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
+
+#main-page-jobs-table a.job-type-dark-yellow:hover {
+    border:solid 1px #eabc7b;
+    color:#eabc7b;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
