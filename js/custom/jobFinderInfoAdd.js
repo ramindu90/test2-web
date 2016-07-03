@@ -187,7 +187,6 @@ function removeWorkInfo(currentItemId) {
 
     for (var i = 0; i < educationalInfo.length; i++) {
         var a = educationalInfo[i];
-
         if (a.key === "workRow_" + currentItemId) {
             educationalInfo.splice(i, 1);
             break;
