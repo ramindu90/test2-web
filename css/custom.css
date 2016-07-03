@@ -71,7 +71,7 @@
     vertical-align: middle;
 }
 
-.general-text-input.form-control{
+.general-text-input.form-control {
     border-radius: 0 !important;
     -webkit-appearance: none;
     border: 1px solid #ccc;
@@ -80,7 +80,7 @@
     /*width: 350px;*/
 }
 
-#login-username.general-text-input.form-control, #reg_email.general-text-input.form-control{
+#login-username.general-text-input.form-control, #reg_email.general-text-input.form-control {
     margin-top: 10px;
 }
 
@@ -88,19 +88,20 @@
     padding: 0;
     border: none;
     background: none;
-    display:inline;
-    margin-bottom:2px;
+    display: inline;
+    margin-bottom: 2px;
 }
 
-#login-modal .modal-content{
+#login-modal .modal-content {
     width: 380px;
 }
 
-.sub-slider-area{
+.sub-slider-area {
     position: relative;
     height: 150px
 }
-.sub-slider-area #bg-slider .item img{
+
+.sub-slider-area #bg-slider .item img {
     width: 100%;
     height: 150px
 }
@@ -152,7 +153,7 @@ label {
     height: 47px;
 }
 
-.larger-editor{
+.larger-editor {
     padding: 10px;
     background: #FFF;
     min-height: 100px;
@@ -174,15 +175,16 @@ label {
 }
 
 #educationInfoTable th {
-    text-align: center;
+    /*text-align: center;*/
 }
+
 #workInfoTable th {
-    text-align: center;
+    /*text-align: center;*/
 }
 
 /*#dashboard-nav-side-menu{*/
-    /*position:fixed;*/
-    /*top:280px;*/
+/*position:fixed;*/
+/*top:280px;*/
 /*}*/
 
 a.clickable-anchor:hover {
@@ -193,11 +195,11 @@ a.clickable-anchor:hover {
     text-align: center;
 }
 
-.row.footer-copy p{
+.row.footer-copy p {
     padding-top: 10px;
 }
 
-.collapse.navbar-collapse{
+.collapse.navbar-collapse {
     margin-left: 130px;
     /*margin-right: 140px;*/
 }
@@ -218,6 +220,18 @@ a.clickable-anchor:hover {
     border: 1px solid #929090;
 }
 
+.information-table.table tr td p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.information-table.table tr.odd {
+    background: #fafafa;
+}
+.information-table.table tr.even {
+    background: #FFFFFF;
+}
+
 .information-table.table tr:hover td a:hover {
     /* background: #fff; */
     /* color: #0096cc; */
@@ -227,17 +241,31 @@ a.clickable-anchor:hover {
     /* background: #00aaa5; */
 }
 
-.information-table.table  {
-     background: #e9e9e9;
-     border: 1px solid #929090;
+.information-table.table {
+    /*background: #e9e9e9;*/
+    /*border: 1px solid #929090;*/
 }
 
-.information-table.table  th {
-    border-bottom: 1px solid #929090;
+.information-table.table th {
+    border-bottom: 2px solid #929090;
+    font-size: x-small !important;
+    text-transform: uppercase !important;
 }
 
-.information-table.table  tr:hover th {
-     /*background: #aa2633;*/
+.information-table.table .action {
+    width: 80px;
+}
+
+.information-table.table tr:hover th {
+    /*background: #aa2633;*/
+}
+
+.main-page-applied-shortlisted-jobs-table.table.main-page-jobs-table tr td h4{
+    margin-bottom: 10px;
+}
+
+.main-page-applied-shortlisted-jobs-table.table.main-page-jobs-table p{
+    margin: 0 0 4px;
 }
 
 .update-education-btn {
@@ -247,6 +275,7 @@ a.clickable-anchor:hover {
     background-color: #000000;
     color: #ffffff;
 }
+
 .update-information-btn {
     display: block;
     width: 300px;
@@ -258,28 +287,30 @@ a.clickable-anchor:hover {
 .job-icons span {
     margin-bottom: 8px;
 }
+
 .second-section-dashboard {
     margin-top: 20px;
 }
 
-#main-page-jobs-table.table tr.odd{
+.main-page-jobs-table.table tr.odd {
     background: #fafafa
 }
-#main-page-jobs-table.table tr.even{
+
+.main-page-jobs-table.table tr.even {
     background: #FFFFFF
 }
-#main-page-jobs-table.table tr:hover{
+
+.main-page-jobs-table.table tr:hover {
     border-bottom: 1px solid #0096cc;
     border-top: 1px solid #0096cc;
     background: #f8ffff;
     color: #666666
 }
 
-#main-page-jobs-table.table tr{
+.main-page-jobs-table.table tr {
     border-bottom: 1px solid transparent;
     border-top: 1px solid transparent;
 }
-
 
 .job-type-btn {
     border: medium none;
@@ -294,58 +325,157 @@ a.clickable-anchor:hover {
     text-align: center;
 }
 
-
-#main-page-jobs-table .job-type-green {
-    border:solid 1px #478723;
-    color:#478723;
+.main-page-jobs-table .job-type-green {
+    border: solid 1px #478723;
+    color: #478723;
     background: #ffffff !important;
     padding: 5px 15px;
 }
 
-#main-page-jobs-table a.job-type-green:hover {
-    border:solid 1px #6ab73f;
-    color:#6ab73f;
+.main-page-jobs-table a.job-type-green:hover {
+    border: solid 1px #6ab73f;
+    color: #6ab73f;
     background: #ffffff !important;
     padding: 5px 15px;
 }
 
-#main-page-jobs-table .job-type-blue {
-    border:solid 1px #4288c9;
-    color:#4288c9;
+.main-page-jobs-table .job-type-blue {
+    border: solid 1px #4288c9;
+    color: #4288c9;
     background: #ffffff !important;
     padding: 5px 15px;
 }
 
-#main-page-jobs-table a.job-type-blue:hover {
-    border:solid 1px #59afff;
-    color:#59afff;
+.main-page-jobs-table a.job-type-blue:hover {
+    border: solid 1px #59afff;
+    color: #59afff;
     background: #ffffff !important;
     padding: 5px 15px;
 }
 
-#main-page-jobs-table .job-type-red {
-    border:solid 1px #ef4b39;
-    color:#ef4b39;
+.main-page-jobs-table .job-type-red {
+    border: solid 1px #ef4b39;
+    color: #ef4b39;
     background: #ffffff !important;
     padding: 5px 15px;
 }
 
-#main-page-jobs-table a.job-type-red:hover {
-    border:solid 1px #ff9084;
-    color:#ff9084;
-    background: #ffffff !important;
-    padding: 5px 15px;
-}
-#main-page-jobs-table .job-type-dark-yellow {
-    border:solid 1px #dc932b;
-    color:#dc932b;
+.main-page-jobs-table a.job-type-red:hover {
+    border: solid 1px #ff9084;
+    color: #ff9084;
     background: #ffffff !important;
     padding: 5px 15px;
 }
 
-#main-page-jobs-table a.job-type-dark-yellow:hover {
-    border:solid 1px #eabc7b;
-    color:#eabc7b;
+.main-page-jobs-table .job-type-dark-yellow {
+    border: solid 1px #dc932b;
+    color: #dc932b;
     background: #ffffff !important;
     padding: 5px 15px;
+}
+
+.main-page-jobs-table a.job-type-dark-yellow:hover {
+    border: solid 1px #eabc7b;
+    color: #eabc7b;
+    background: #ffffff !important;
+    padding: 5px 15px;
+}
+
+/* ---------------------------------- */
+/* Notification Boxes
+------------------------------------- */
+.success,
+.notification {
+    line-height: 24px;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 22px 26px;
+    margin-left: 15px;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.notification span {
+    font-weight: 600;
+}
+
+.success,
+.notification.success,
+.notification.success a,
+.notification.success strong {
+    background-color: #EBF6E0;
+    color: #5f9025;
+}
+
+.notification.error,
+.notification.error a,
+.notification.error strong {
+    background-color: #ffe9e9;
+    color: #de5959;
+}
+
+.notification.warning,
+.notification.warning a,
+.notification.warning strong {
+    background-color: #FBFADD;
+    color: #8f872e;
+}
+
+.notification.notice,
+.notification.notice a,
+.notification.notice strong {
+    background-color: #E9F7FE;
+    color: #4587a9;
+}
+
+.notification strong {
+    border: none !important;
+}
+
+.notification.success .close,
+.notification.error .close,
+.notification.warning .close,
+.notification.notice .close {
+    padding: 0px 9px;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    display: block;
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+}
+
+.notification.notice p span i {
+    font-weight: 500;
+}
+
+.notification a.button {
+    float: right;
+    color: #fff;
+    margin-top: 3px;
+}
+
+.notification.notice a.button {
+    background-color: #388fc5;
+}
+
+.notification.warning a.button {
+    background-color: #dfbe51;
+}
+
+.notification.error a.button {
+    background-color: #d34c4c;
+}
+
+.notification.success a.button {
+    background-color: #79ba38;
+}
+
+#cv-browse-button {
+    margin-top: 8px;
+    margin-left: 0;
+    width:150px;
 }
