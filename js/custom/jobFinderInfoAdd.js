@@ -45,7 +45,7 @@ function addEducationalInfo() {
         headRow.innerHTML = "<th>School/University</th>" +
             "<th>Degree Level</th>" +
             "<th>Year</th>" +
-            "<th>remove</th>";
+            "<th class='action'>Action</th>";
         tableBody.appendChild(headRow);
     } else {
         tableBody = document.getElementById("educationTableBody");
@@ -69,10 +69,10 @@ function addEducationalInfo() {
     item["grade"] = document.getElementById('grade-s').value;
     item["key"] = "educationRow_" + currentItemsInEducationalInfo;
 
-    dataRow.innerHTML = "<td style=\"text-align:center;\"><p>" + item["schoolOrUni"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><p>" + item["degreeLevel"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><p>" + item["year"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><a class=\"clickable-anchor\" " +
+    dataRow.innerHTML = "<td><p>" + item["schoolOrUni"] + "</p></td>" +
+        "<td><p>" + item["degreeLevel"] + "</p></td>" +
+        "<td><p>" + item["year"] + "</p></td>" +
+        "<td class=\"action\"><a class=\"clickable-anchor\" " +
                                                 "onclick='removeEducationalInfo(" + currentItemsInEducationalInfo + ")'>" +
                                                     "<i class=\"fa fa-times\"></i>" +
                                                 "remove</a></td>";
@@ -112,64 +112,6 @@ function removeEducationalInfo(currentItemId) {
     }
 }
 
-function addWorkInfo2() {
-    var item = {};
-    var table = document.getElementById("workInfoTable");
-    if (currentItemsInEducationalInfo == 0) {
-        var headRow = document.createElement("tr");
-        headRow.setAttribute("id", "workTableHeaderId");
-        headRow.innerHTML = "<th>Work Place</th>" +
-            "<th>Designation</th>" +
-            "<th>No of Years</th>" +
-            "<th>remove</th>";
-        table.appendChild(headRow);
-    }
-    currentItemsInWorkInfo++;
-    item["work-place"] = document.getElementById('work-place').value;
-    item["number-of-years"] = document.getElementById('number-of-years').value;
-    item["designation"] = document.getElementById("designation").value;
-    item["work-description"] = document.getElementById('work-description').value;
-    item["key"] = "workRow_" + currentItemsInWorkInfo;
-
-    var dataRow = document.createElement("tr");
-    dataRow.setAttribute("id", "workRow_" + currentItemsInWorkInfo);
-    // dataRow.innerHTML = "<td class=\"three columns\"><h5 style=\"text-align:center;float:left;\"/>" + item["schoolOrUni"] + "</h5></td>" +
-    //                     "<td class=\"three columns\"><h5 style=\"text-align:center;float:left;\">" + item["degreeLevel"] + "</h5></td>" +
-    //                     "<td class=\"three columns\"><h5 style=\"text-align:center;float:left;\">" + item["year"] + "</h5></td>";
-
-    dataRow.innerHTML = "<td style=\"text-align:center;\">" + item["work-place"] + "</td>" +
-        "<td style=\"text-align:center;\">" + item["designation"] + "</td>" +
-        "<td style=\"text-align:center;\">" + item["number-of-years"] + "</td>";
-
-
-    var dataCell = document.createElement("td");
-    dataCell.setAttribute("style", "text-align:center");
-    var img = document.createElement("img");
-    var a = document.createElement("a");
-    a.setAttribute("href", "#");
-    a.setAttribute("onclick", "return false;");
-    img.setAttribute("src", "img/common/remove_icon.png");
-    img.setAttribute("alt", "remove icon");
-    img.setAttribute("class", "button");
-    img.setAttribute("style", "width:25px;height:25px;float: left;");
-    img.setAttribute("onclick", "removeWorkInfo(" + currentItemsInWorkInfo + ")");
-    a.appendChild(img);
-    dataCell.appendChild(a);
-    dataRow.appendChild(dataCell);
-
-    table.appendChild(dataRow);
-
-    workInfo.push(item);
-    document.getElementById('work-place').value = "";
-    document.getElementById('number-of-years').value = "";
-    document.getElementById('designation').value = "";
-    document.getElementById('work-description').value = "";
-
-    var container = document.getElementById("workInfoDiv");
-    container.style.display = 'block';
-
-}
-
 function addWorkInfo() {
     var item = {};
     var table = document.getElementById("workInfoTable");
@@ -186,7 +128,7 @@ function addWorkInfo() {
         headRow.innerHTML = "<th>Work Place</th>" +
             "<th>Designation</th>" +
             "<th>No of Years</th>" +
-            "<th>Action</th>";
+            "<th class=\"action\">Action</th>";
         tableBody.appendChild(headRow);
     } else {
         tableBody = document.getElementById("workTableBody");
@@ -208,23 +150,13 @@ function addWorkInfo() {
     item["work-description"] = document.getElementById('work-description').value;
     item["key"] = "workRow_" + currentItemsInWorkInfo;
 
-
-    dataRow.innerHTML = "<td style=\"text-align:center;\"><p>" + item["schoolOrUni"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><p>" + item["degreeLevel"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><p>" + item["year"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><a class=\"clickable-anchor\" " +
-        "onclick='removeEducationalInfo(" + currentItemsInEducationalInfo + ")'>" +
-        "<i class=\"fa fa-times\"></i>" +
-        "remove</a></td>";
-
-
-    dataRow.innerHTML = "<td style=\"text-align:center;\"><p>" + item["work-place"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><p>" + item["designation"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><p>" + item["number-of-years"] + "</p></td>" +
-        "<td style=\"text-align:center;\"><a class=\"clickable-anchor\" " +
-        "onclick='removeWorkInfo(" + currentItemsInWorkInfo + ")'>" +
-        "<i class=\"fa fa-times\"></i>" +
-        "remove</a></td>";
+    dataRow.innerHTML = "<td><p>" + item["work-place"] + "</p></td>" +
+        "<td><p>" + item["designation"] + "</p></td>" +
+        "<td><p>" + item["number-of-years"] + "</p></td>" +
+        "<td class=\"action\"><a class=\"clickable-anchor\" " +
+                "onclick='removeWorkInfo(" + currentItemsInWorkInfo + ")'>" +
+                "<i class=\"fa fa-times\"></i>" +
+                "remove</a></td>";
 
 
     tableBody.appendChild(dataRow);
