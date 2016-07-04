@@ -314,7 +314,6 @@ a.clickable-anchor:hover {
 
 .job-type-btn {
     border: medium none;
-    border-radius: 2px;
     color: #fff;
     float: right;
     font-size: 11px;
@@ -323,6 +322,7 @@ a.clickable-anchor:hover {
     min-width: 115px;
     padding: 1px 15px;
     text-align: center;
+    width:100px !important;
 }
 
 .main-page-jobs-table .job-type-green {
@@ -485,4 +485,46 @@ span.part-time { background-color: #f1630d; }
 span.freelance { background-color: #53b427; }
 span.internship { background-color: #e1d123; }
 span.temporary { background-color: #e12335; }
+
+.next-to-button-notification {
+    padding: 18px 26px;
+    line-height: 7px;
+    float: left;
+    margin-top: 8px;
+}
+
+.add-more {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    margin: 0px;
+    padding-bottom: 0px;
+    padding-top: 10px;
+    text-decoration: underline;
+    vertical-align: middle;
+    color: #0096cc !important;
+}
+
+.div-close-icon {
+    line-height: 12px;
+    width: 18px;
+    font-size: 8pt;
+    margin-top: 1px;
+    margin-right: 2px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.resume-upload-section {
+    display: inline;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 15px !important;
+    margin-left: 15px;
+}
 
