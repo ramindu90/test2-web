@@ -517,3 +517,14 @@ span.temporary { background-color: #e12335; }
     right:0;
 }
 
+.resume-upload-section {
+    display: inline;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-right: 15px !important;
+    margin-left: 15px;
+}
+

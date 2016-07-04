@@ -4,7 +4,7 @@
 var educationalInfo = [];
 var workInfo = [];
 var currentItemsInEducationalInfo = 0;
-var currentItemsInWorkInfo = 0;
+var currentItemsInCVList = 0;
 var map;
 
 var profileSection = "profile-section";
@@ -116,7 +116,7 @@ function addWorkInfo() {
     var item = {};
     var table = document.getElementById("workInfoTable");
     var tableBody;
-    if (currentItemsInWorkInfo == 0) {
+    if (currentItemsInCVList == 0) {
         tableBody = document.createElement("tbody");
         tableBody.setAttribute("id", "workTableBody");
         var container = document.getElementById("workInfoDiv");
@@ -133,13 +133,13 @@ function addWorkInfo() {
     } else {
         tableBody = document.getElementById("workTableBody");
     }
-    currentItemsInWorkInfo++;
+    currentItemsInCVList++;
     var dataRow = document.createElement("tr");
-    dataRow.setAttribute("id", "workRow_" + currentItemsInWorkInfo);
+    dataRow.setAttribute("id", "workRow_" + currentItemsInCVList);
 
-    console.log(currentItemsInWorkInfo);
+    console.log(currentItemsInCVList);
 
-    if (currentItemsInWorkInfo % 2 == 1) {
+    if (currentItemsInCVList % 2 == 1) {
         dataRow.setAttribute("class", "odd");
     } else {
         dataRow.setAttribute("class", "even");
@@ -148,13 +148,13 @@ function addWorkInfo() {
     item["number-of-years"] = document.getElementById('number-of-years').value;
     item["designation"] = document.getElementById("designation").value;
     item["work-description"] = document.getElementById('work-description').value;
-    item["key"] = "workRow_" + currentItemsInWorkInfo;
+    item["key"] = "workRow_" + currentItemsInCVList;
 
     dataRow.innerHTML = "<td><p>" + item["work-place"] + "</p></td>" +
         "<td><p>" + item["designation"] + "</p></td>" +
         "<td><p>" + item["number-of-years"] + "</p></td>" +
         "<td class=\"action\"><a class=\"clickable-anchor\" " +
-                "onclick='removeWorkInfo(" + currentItemsInWorkInfo + ")'>" +
+                "onclick='removeWorkInfo(" + currentItemsInCVList + ")'>" +
                 "<i class=\"fa fa-times\"></i>" +
                 "remove</a></td>";
 

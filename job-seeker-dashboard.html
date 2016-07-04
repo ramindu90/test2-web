@@ -422,27 +422,28 @@
                 <a class="close" href="#"></a>
             </div>
             <div class="col-md-12">
+                <p>CV List</p>
                 <div class="table-responsive">
                     <table class="table main-page-jobs-table main-page-applied-shortlisted-jobs-table">
                         <tbody id="cv-and-cover-letter-table-body">
-                        <tr class="odd col-md-12">
-                            <td class="tbl-title col-md-9"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-1"><a href='#' class="job-type-btn job-type-green clickable-anchor" onclick="deleteCVInfo(CVName)">View</a></td>
-                            <td class="tbl-title col-md-1"><a class="job-type-btn job-type-blue clickable-anchor">Update</a></td>
-                            <td class="tbl-title col-md-1"><a class="job-type-btn job-type-red clickable-anchor">Delete</a></td>
+                        <!--<tr class="odd col-md-12">-->
+                            <!--<td class="tbl-title col-md-9"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>-->
+                            <!--<td class="tbl-title col-md-1"><a href='#' class="job-type-btn job-type-green clickable-anchor" onclick="deleteCVInfo(CVName)">View</a></td>-->
+                            <!--<td class="tbl-title col-md-1"><a class="job-type-btn job-type-blue clickable-anchor">Update</a></td>-->
+                            <!--<td class="tbl-title col-md-1"><a class="job-type-btn job-type-red clickable-anchor">Delete</a></td>-->
                             <!--<td class="col-md-3"><p><i class="fa fa-briefcase"></i>WSO2 Inc.</p> <p><i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA</p> <p>&dollar; 14000</p></td>-->
-                        </tr>
+                        <!--</tr>-->
                         </tbody>
                     </table>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="add-new-cv-details">
-                <a  class="clickable-anchor button add-more cs-color" onclick="makeViewDisplay('cv-info-editing-area','add-new-cv-details')">
+                <a  class="clickable-anchor button add-more cs-color" onclick="showAddNewCVInformationView()">
                     <i class="fa fa-plus" aria-hidden="true"></i>Add New</a>
             </div>
 
-            <div id="cv-info-editing-area" style="display:none">
+            <div id="cv-info-editing-area" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 resume-upload-section">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div>
                         <input type="file" id="browse" name="fileupload" style="display: none" onChange="handleChange();"/>
@@ -470,10 +471,12 @@
                 </div>
                 <div class="col-md-12">
                     <div class="row">
-                        <button class="navbar-btn nav-button wow update-information-btn" onclick="" style="display:none"><i class="fa fa-floppy-o"></i> Update CV Information</button>
-                        <button class="navbar-btn nav-button wow update-information-btn" onclick="addNewCVInformation()"><i class="fa fa-floppy-o"></i> Add CV Information</button>
+                        <button id="update-cv-info-button" class="navbar-btn nav-button update-information-btn" onclick="updateCVInformation()" style="display:none"><i class="fa fa-floppy-o"></i> Update CV Information</button>
+                        <button id="add-cv-info-button" class="navbar-btn nav-button update-information-btn" onclick="addNewCVInformation()"><i class="fa fa-floppy-o"></i> Add CV Information</button>
+                        <button id="done-show-cv-info-button" class="navbar-btn nav-button update-information-btn" onclick="doneShowCVInformation()"><i class="fa fa-floppy-o"></i> OK</button>
                     </div>
                 </div>
+
             </div>
 
         </div>
