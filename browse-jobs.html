@@ -43,6 +43,30 @@
     <link rel="stylesheet" href="css/uikit/addons/uikit.addons.min.css"/>
 
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom/socialLogin.js"></script>
+    <script src="js/custom/custom.js"></script>
+
+
+    <!--<script src="js/leaflet/leaflet-search-control.js"></script>-->
+    <!--<script src="js/leaflet/leaflet.featuregroup.subgroup.js"></script>-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="js/leaflet/leaflet.js"></script>
+    <script src="js/leaflet/leaflet.markercluster.js"></script>
+    <script src="js/leaflet/marker.js"></script>
+    <script src="js/leaflet/marker.rotate.js"></script>
+    <script src="js/uikit/uikit.min.js"></script>
+    <script src="js/uikit/addons/notify.min.js"></script>
+    <script src="js/custom/browseJobs.js"></script>
+    <script src="js/bootstrap-paginator.min.js"></script>
+    <script src="js/jquery.bootpag.min.js"></script>
 </head>
 <body>
 
@@ -124,95 +148,99 @@
 
 <div class="content-area">
     <div class="container jobs row">
-        <div class="col-md-3">
-            <div class="cs-job-vacancy-type">
-                <div class="searchbox-heading">
-                    <h5>Vacancy Type</h5>
-                </div>
-                <form method="GET" id="frm_job_type_list">
-                    <ul class="cs_vacancy_type">
-                        <li type="checkbox"><span class="cs_vacancy_type_list" style="background-color:#243d4f;"></span>
-                            <a href="?job_type=freelance" class="active" onclick="cs_listing_content_load();">Freelance <span>(9)</span></a></li>
-                        <li type="checkbox"><span class="cs_vacancy_type_list" style="background-color:#ef4b39;"></span><a href="?job_type=full-time" onclick="cs_listing_content_load();">Full Time <span>(8)</span></a></li>
-                        <li type="checkbox"><span class="cs_vacancy_type_list" style="background-color:#dc932b;"></span><a href="?job_type=internship" onclick="cs_listing_content_load();">Internship <span>(8)</span></a></li>
-                        <li type="checkbox"><span class="cs_vacancy_type_list" style="background-color:#4288c9;"></span><a href="?job_type=part-time" onclick="cs_listing_content_load();">Part Time <span>(5)</span></a></li>
-                        <li type="checkbox"><span class="cs_vacancy_type_list" style="background-color:#dd0d0d;"></span><a href="?job_type=temporary" onclick="cs_listing_content_load();">Temporary <span>(5)</span></a></li>
-                        <li type="checkbox"><span class="cs_vacancy_type_list" style="background-color:#478723;"></span><a href="?job_type=volunteer" onclick="cs_listing_content_load();">Volunteer <span>(5)</span></a></li>
-                    </ul>
-                </form>
-            </div>
-
-            <div class="cs-job-specialisms">
-                <div class="searchbox-heading"> <h5>specialisms</h5> </div>
-                <form method="GET" id="frm_specialisms_list">
-                    <input type="hidden" id="cs_job_type" name="job_type" value="freelance">                <ul class="specialism_list">
-                    <li class="radio"><div class="checkbox checkbox-primary"><input type="radio" class="radio" onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();" id="checklist1" name="specialisms" value="accountancy"><label for="checklist1">Accountancy<span>(2)</span></label></div></li><li class="radio"><div class="checkbox checkbox-primary"><input type="radio" class="radio" onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();" id="checklist2" name="specialisms" value="banking"><label for="checklist2">Banking<span>(2)</span></label></div></li><li class="radio"><div class="checkbox checkbox-primary"><input type="radio" class="radio" onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();" id="checklist3" name="specialisms" value="charity-voluntary"><label for="checklist3">Charity &amp; Voluntary<span>(3)</span></label></div></li><li class="radio"><div class="checkbox checkbox-primary"><input type="radio" class="radio" onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();" id="checklist4" name="specialisms" value="digital-creative"><label for="checklist4">Digital &amp; Creative<span>(3)</span></label></div></li><li class="radio"><div class="checkbox checkbox-primary"><input type="radio" class="radio" onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();" id="checklist5" name="specialisms" value="estate-agency"><label for="checklist5">Estate Agency<span>(3)</span></label></div></li><li class="radio"><div class="checkbox checkbox-primary"><input type="radio" class="radio" onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();" id="checklist6" name="specialisms" value="graduate"><label for="checklist6">Graduate<span>(2)</span></label></div></li><li class="radio"><div class="checkbox checkbox-primary"><input type="radio" class="radio" onclick="cs_listing_content_load();" onchange="javascript:frm_specialisms_list.submit();" id="checklist7" name="specialisms" value="it-contractor"><label for="checklist7">IT Contractor<span>(7)</span></label></div></li>                            <li>
-                    <div class="checkbox checkbox-primary">
-                        <a data-target="#light" data-toggle="modal" href="#">More</a>
-                    </div>
-                </li>
-                </ul>
-                </form>
-            </div>
-
-            <div class="nav-side-menu" id="dashboard-nav-side-menu">
-                <div class="brand">ALL FILTERS</div>
+        <div class="col-md-3 browse-jobs">
+            <div class="nav-side-menu" id="dashboard-nav-side-menu-job-browse">
+                <div class="brand">FILTERING CRITERIA</div>
                 <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
-                <div class="menu-list">
+                <div class="menu-list" style="clear: both;">
 
                     <ul id="menu-content" class="menu-content collapse out">
 
-                        <li data-toggle="collapse" data-target="#profile" class="collapsed menu-list-item" id="profile-section-collapse-id">
-                            <a class="clickable-anchor" onclick="changeMainView('profile-section')"><i class="fa fa-user fa-lg"></i> Profile <span class="arrow"></span></a>
+                        <li data-toggle="collapse" data-target="#vacancy-type" class="collapsed menu-list-item"
+                            id="profile-section-collapse-id1">
+                            <a class="clickable-anchor"><i class="fa fa-user fa-lg"></i> Vacancy Type <span
+                                    class="arrow"></span></a>
                         </li>
-                        <ul class="sub-menu collapse" id="profile">
-                            <li id="profile-section-personal-info-collapse-id"><a class="clickable-anchor"> Personal Info</a></li>
-                            <li id="profile-section-contact-info-collapse-id"><a class="clickable-anchor"> Contact Info</a></li>
-                            <!--<li><a href="#education-info-section"> Extra Info</a></li>-->
+                        <ul class="sub-menu collapse" id="vacancy-type">
+                            <li id="#1ba"><label><input type="checkbox" value="" class="side-nav-menu">
+                                Volunteer</label></li>
+                            <li id="#2ba"><label><input type="checkbox" value="" class="side-nav-menu"> Part
+                                time</label></li>
+                            <li id="#3ba"><label><input type="checkbox" value="" class="side-nav-menu"> Full
+                                time</label></li>
+                            <li id="#4ba"><label><input type="checkbox" value="" class="side-nav-menu">
+                                Internship</label></li>
                         </ul>
 
-                        <li data-toggle="collapse" data-target="#resume" class="collapsed menu-list-item" id="resume-section-collapse-id">
-                            <a class="clickable-anchor" onclick="changeMainView('resume-section')"><i class="fa fa-file-text fa-lg"></i> My Resume <span class="arrow"></span></a>
+                        <li data-toggle="collapse" data-target="#specialism-type" class="collapsed menu-list-item"
+                            id="profile-section-collapse-id2">
+                            <a class="clickable-anchor"><i class="fa fa-user fa-lg"></i> Specialism<span
+                                    class="arrow"></span></a>
                         </li>
-                        <ul class="sub-menu collapse" id="resume">
-                            <li id="resume-section-education-info-collapse-id"><a class="clickable-anchor"> Education Info</a></li>
-                            <li id="resume-section-work-info-collapse-id"><a class="clickable-anchor"> Experience Info</a></li>
-                            <!--<li><a href="#skills-section"> Skills</a></li>-->
-                            <!--<li><a href="#honors-awards-section"> Honors & Awards </a></li>-->
+                        <ul class="sub-menu collapse" id="specialism-type">
+                            <li id="#1a"><label><input type="checkbox" value="" class="side-nav-menu">
+                                Accountancy</label></li>
+                            <li id="#2a"><label><input type="checkbox" value="" class="side-nav-menu"> Banking</label>
+                            </li>
+                            <li id="#3a"><label><input type="checkbox" value="" class="side-nav-menu"> Graduate</label>
+                            </li>
+                            <li id="#4a"><label><input type="checkbox" value="" class="side-nav-menu"> Finance</label>
+                            </li>
+                        </ul>
+
+                        <li data-toggle="collapse" data-target="#salary" class="collapsed menu-list-item"
+                            id="profile-section-collapse-id">
+                            <a class="clickable-anchor"><i class="fa fa-user fa-lg"></i> Salary <span
+                                    class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="salary">
+                            <li id="#1"><label><input type="checkbox" value="" class="side-nav-menu"> 0-$15000</label>
+                            </li>
+                            <li id="#2"><label><input type="checkbox" value="" class="side-nav-menu">
+                                $15000-$30000</label></li>
+                            <li id="#3"><label><input type="checkbox" value="" class="side-nav-menu">
+                                $30000-$40000</label></li>
+                        </ul>
+
+                        <li data-toggle="collapse" data-target="#experience" class="collapsed menu-list-item"
+                            id="resume-section-collapse-id3">
+                            <a class="clickable-anchor"><i class="fa fa-file-text fa-lg"></i> Experience <span
+                                    class="arrow"></span></a>
+                        </li>
+                        <ul class="sub-menu collapse" id="experience">
+                            <li id="#11"><label><input type="checkbox" value="" class="side-nav-menu"/> Fresh</label>
+                            </li>
+                            <li id="#22"><label><input type="checkbox" value="" class="side-nav-menu"/> Less Than 1 Year</label>
+                            </li>
+                            <li id="#33"><label><input type="checkbox" value="" class="side-nav-menu"/> 2 Years</label>
+                            </li>
+                            <li id="#44"><label><input type="checkbox" value="" class="side-nav-menu"/> 3 Years</label>
+                            </li>
+                            <li id="#55"><label><input type="checkbox" value="" class="side-nav-menu"/> 4 Years</label>
+                            </li>
                         </ul>
 
 
-                        <li class="menu-list-item">
-                            <a class="clickable-anchor" onclick="changeMainView('short-listed-jobs-section')">
-                                <i class="fa fa-check fa-lg"></i> Short Listed Jobs
-                            </a>
+                        <li data-toggle="collapse" data-target="#qualifications" class="collapsed menu-list-item"
+                            id="resume-section-collapse-id">
+                            <a class="clickable-anchor"><i class="fa fa-file-text fa-lg"></i> Qualification <span
+                                    class="arrow"></span></a>
                         </li>
-                        <li class="menu-list-item">
-                            <a class="clickable-anchor" onclick="changeMainView('applied-jobs-section')">
-                                <i class="fa fa-briefcase fa-lg"></i> Applied Jobs
-                            </a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a class="clickable-anchor" onclick="changeMainView('alerts-section')">
-                                <i class="fa fa-bell-o fa-lg"></i> Alerts
-                            </a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a class="clickable-anchor" onclick="changeMainView('cv-cover-letter-section')">
-                                <i class="fa fa-file fa-lg"></i> CV and Cover Letter
-                            </a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a class="clickable-anchor" onclick="changeMainView('change-password-section')">
-                                <i class="fa fa-key fa-lg"></i> Change Password
-                            </a>
-                        </li>
-                        <li class="menu-list-item">
-                            <a class="clickable-anchor">
-                                <i class="fa fa-sign-out fa-lg"></i> Logout
-                            </a>
-                        </li>
+                        <ul class="sub-menu collapse" id="qualifications">
+                            <li id="#111"><label><input type="checkbox" value="" class="side-nav-menu"/>
+                                Certificate</label></li>
+                            <li id="#222"><label><input type="checkbox" value="" class="side-nav-menu"/> Diploma</label>
+                            </li>
+                            <li id="#333"><label><input type="checkbox" value="" class="side-nav-menu"/> Associate
+                                Degree</label></li>
+                            <li id="#444"><label><input type="checkbox" value="" class="side-nav-menu"/> Bachelor Degree</label>
+                            </li>
+                            <li id="#555"><label><input type="checkbox" value="" class="side-nav-menu"/> Masters Degree</label>
+                            </li>
+                            <li id="#666"><label><input type="checkbox" value="" class="side-nav-menu"/> Doctorate
+                                Degree</label></li>
+                        </ul>
                     </ul>
                 </div>
             </div>
@@ -230,54 +258,94 @@
                         <tbody>
                         <tr class="even col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-green clickable-anchor">Volunteer</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-green clickable-anchor">Volunteer</a>
+                            </td>
                             <!--<td class="col-md-3"><p><i class="fa fa-briefcase"></i>WSO2 Inc.</p> <p><i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA</p> <p>&dollar; 14000</p></td>-->
                         </tr>
                         <tr class="even col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-blue clickable-anchor">Part time</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-blue clickable-anchor">Part
+                                time</a></td>
                         </tr>
                         <tr class="odd col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-red clickable-anchor">Full time</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-red clickable-anchor">Full
+                                time</a></td>
                         </tr>
                         <tr class="odd col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-dark-yellow clickable-anchor">Internship</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a
+                                    class="job-type-btn job-type-dark-yellow clickable-anchor">Internship</a></td>
                         </tr>
                         <tr class="even col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-red clickable-anchor">Full time</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-red clickable-anchor">Full
+                                time</a></td>
                         </tr>
                         <tr class="even col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-dark-yellow clickable-anchor">Internship</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a
+                                    class="job-type-btn job-type-dark-yellow clickable-anchor">Internship</a></td>
                         </tr>
                         <tr class="odd col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-blue clickable-anchor">Part time</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-blue clickable-anchor">Part
+                                time</a></td>
                         </tr>
                         <tr class="odd col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-dark-yellow clickable-anchor">Internship</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a
+                                    class="job-type-btn job-type-dark-yellow clickable-anchor">Internship</a></td>
                         </tr>
                         <tr class="even col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-blue clickable-anchor">Part time</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-blue clickable-anchor">Part
+                                time</a></td>
                         </tr>
                         <tr class="even col-md-12">
                             <td class="col-md-1"><img src="img/job-logo1.png" alt="" width="50px" height="50px"></td>
-                            <td class="tbl-title col-md-8"><h4>Web Designer</h4> <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar; 14000</p></td>
-                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-red clickable-anchor">Full time</a></td>
+                            <td class="tbl-title col-md-8"><h4>Web Designer</h4>
+                                <p><i class="fa fa-briefcase"></i>WSO2 Inc. &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-map-marker" aria-hidden="true"></i>San Franciso, USA &nbsp;&nbsp;&nbsp; &dollar;
+                                    14000</p></td>
+                            <td class="tbl-title col-md-2"><a class="job-type-btn job-type-red clickable-anchor">Full
+                                time</a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -287,227 +355,230 @@
                 <p><span>No short listed jobs!</span> Browse for jobs and save it for future references..</p>
                 <a class="close" href="#"></a>
             </div>
+
+            <div class="pull-right">
+                <div id="page-selection"></div>
+                <script>
+                    $('#page-selection').bootpag({
+                        total: 50,
+                        page: 2,
+                        maxVisible: 5,
+                        leaps: true,
+                        firstLastUse: true,
+                        first: '←',
+                        last: '→',
+                        wrapClass: 'pagination',
+                        activeClass: 'active',
+                        disabledClass: 'disabled',
+                        nextClass: 'next',
+                        prevClass: 'prev',
+                        lastClass: 'last',
+                        firstClass: 'first'
+                    }).on("page", function(event, num){
+                        console.log(num);
+                    });
+                </script>
+            </div>
         </div>
 
-</div>
-<div class="footer-area" id="two">
-    <div class="container">
-        <div class="row footer">
-            <div class="col-md-4">
-                <div class="single-footer">
-                    <img src="img/footer-logo.png" alt="" class="wow pulse" data-wow-delay="1s">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati architecto quaerat facere
-                        blanditiis tempora sequi nulla accusamus, possimus cum necessitatibus suscipit quia autem
-                        mollitia, similique quisquam molestias. Vel unde, blanditiis.</p>
+    </div>
+    <div class="footer-area" id="two">
+        <div class="container">
+            <div class="row footer">
+                <div class="col-md-4">
+                    <div class="single-footer">
+                        <img src="img/footer-logo.png" alt="" class="wow pulse" data-wow-delay="1s">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati architecto quaerat facere
+                            blanditiis tempora sequi nulla accusamus, possimus cum necessitatibus suscipit quia autem
+                            mollitia, similique quisquam molestias. Vel unde, blanditiis.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="single-footer">
-                    <h4>Twitter update</h4>
-                    <div class="twitter-updates">
-                        <div class="single-tweets">
-                            <h5>ABOUT 9 HOURS</h5>
-                            <p><strong>AGOMeet Aldous</strong> - a Brave New World for #rails with more cohesion, less
-                                coupling and greater dev speed <a
-                                        href="http://t.co/rsekglotzs">http://t.co/rsekglotzs</a></p>
+                <div class="col-md-4">
+                    <div class="single-footer">
+                        <h4>Twitter update</h4>
+                        <div class="twitter-updates">
+                            <div class="single-tweets">
+                                <h5>ABOUT 9 HOURS</h5>
+                                <p><strong>AGOMeet Aldous</strong> - a Brave New World for #rails with more cohesion,
+                                    less
+                                    coupling and greater dev speed <a
+                                            href="http://t.co/rsekglotzs">http://t.co/rsekglotzs</a></p>
+                            </div>
+                            <div class="single-tweets">
+                                <h5>ABOUT 9 HOURS</h5>
+                                <p><strong>AGOMeet Aldous</strong> - a Brave New World for #rails with more cohesion,
+                                    less
+                                    coupling and greater dev speed <a
+                                            href="http://t.co/rsekglotzs">http://t.co/rsekglotzs</a></p>
+                            </div>
                         </div>
-                        <div class="single-tweets">
-                            <h5>ABOUT 9 HOURS</h5>
-                            <p><strong>AGOMeet Aldous</strong> - a Brave New World for #rails with more cohesion, less
-                                coupling and greater dev speed <a
-                                        href="http://t.co/rsekglotzs">http://t.co/rsekglotzs</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-footer">
+                        <h4>Useful lnks</h4>
+                        <div class="footer-links">
+                            <ul class="list-unstyled">
+                                <li><a href="">About Us</a></li>
+                                <li><a href="" class="active">Services</a></li>
+                                <li><a href="">Work</a></li>
+                                <li><a href="">Our Blog</a></li>
+                                <li><a href="">Customers Testimonials</a></li>
+                                <li><a href="">Affliate</a></li>
+                                <li><a href="">Contact Us</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="single-footer">
-                    <h4>Useful lnks</h4>
-                    <div class="footer-links">
-                        <ul class="list-unstyled">
-                            <li><a href="">About Us</a></li>
-                            <li><a href="" class="active">Services</a></li>
-                            <li><a href="">Work</a></li>
-                            <li><a href="">Our Blog</a></li>
-                            <li><a href="">Customers Testimonials</a></li>
-                            <li><a href="">Affliate</a></li>
-                            <li><a href="">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="row footer-copy">
+                <p><span>(C) website, All rights reserved</span> | <span>Graphic Designed by <a
+                        href="#">Job Find</a></span> | <span> Web Designed by <a
+                        href="#">Job Find</a></span></p>
             </div>
-        </div>
-        <div class="row footer-copy">
-            <p><span>(C) website, All rights reserved</span> | <span>Graphic Designed by <a
-                    href="#">Job Find</a></span> | <span> Web Designed by <a
-                    href="#">Job Find</a></span></p>
         </div>
     </div>
-</div>
 
-<!-- Login Modal -->
-<div class="modal fade" id="login-modal" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-body">
-                <ul class="nav nav-tabs" data-tabs="tabs" id="login-nav-tabs">
-                    <li class="active"><a href="#loginTab" data-toggle="tab">Login</a></li>
-                    <li><a href="#registerTab" data-toggle="tab">Register</a></li>
-                    <!--<button class="navbar-btn nav-button wow active" data-wow-delay="0.6s" href="#registerTab" onclick="changeLoginView('toLogin')" >Login</button>-->
-                    <!--<button class="navbar-btn nav-button wow" data-wow-delay="0.6s" href="#loginTab" onclick="changeLoginView('toRegister')">Register</button>-->
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="float:right">×
-                    </button>
-                </ul>
+    <!-- Login Modal -->
+    <div class="modal fade" id="login-modal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" data-tabs="tabs" id="login-nav-tabs">
+                        <li class="active"><a href="#loginTab" data-toggle="tab">Login</a></li>
+                        <li><a href="#registerTab" data-toggle="tab">Register</a></li>
+                        <!--<button class="navbar-btn nav-button wow active" data-wow-delay="0.6s" href="#registerTab" onclick="changeLoginView('toLogin')" >Login</button>-->
+                        <!--<button class="navbar-btn nav-button wow" data-wow-delay="0.6s" href="#loginTab" onclick="changeLoginView('toRegister')">Register</button>-->
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="float:right">
+                            ×
+                        </button>
+                    </ul>
 
-                <div class="tab-content">
+                    <div class="tab-content">
+                        <!-- Login -->
+                        <div class="tab-pane active" id="loginTab">
+                            <form action="" class="form-inline">
+                                <div class="form-group">
+                                    <input type="text" class="general-text-input form-control" name="username"
+                                           id="login-username" placeholder="Username or Email Address" value=""/>
+                                </div>
+                                <div class="form-group">
+                                    <input class="general-text-input form-control" type="password" name="password"
+                                           id="password" placeholder="Password"/>
+                                </div>
+                                <div id="specialism-search1" class="form-group">
+                                    <input type="submit" class="navbar-btn nav-button wow" name="login" value="Login"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rememberme" class="rememberme login-font">
+                                        <input name="rememberme" type="checkbox" id="rememberme" value="forever"/>
+                                        Remember
+                                        Me</label>
+                                </div>
+                                <div class="form-group">
+                                    <p class="lost_password login-font">
+                                        <a href="#">Lost Your Password?</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Register -->
+                        <div class="tab-pane" id="registerTab">
+                            <form action="" class="form-inline">
+                                <div class="form-group">
+                                    <input type="email" class="general-text-input form-control" name="reg_email"
+                                           id="reg_email" value="" placeholder="Email Address"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="general-text-input form-control" name="reg_username"
+                                           id="reg_username" value="" placeholder="Username"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="general-text-input form-control" name="password"
+                                           id="reg_password" placeholder="Password"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="general-text-input form-control" name="password"
+                                           id="reg_password2" placeholder="Repeat Password"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="navbar-btn nav-button wow" name="register"
+                                           value="Register"/>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div style="display: inline-block; margin: 0 auto;">
+                        <button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img
+                                src="img/login/facebookN.png"/></button>
+                        <button id="twitter" class="login-button-vertical"><img src="img/login/twitterN.png"/></button>
+                        <button id="google" class="customGPlusSignIn login-button-vertical"><img
+                                src="img/login/gmailN.png"/></button>
+                        <button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img
+                                src="img/login/linkedInN.png"/></button>
+                    </div>
+
+                    <!--<div class="tabs-container">-->
                     <!-- Login -->
-                    <div class="tab-pane active" id="loginTab">
-                        <form action="" class="form-inline">
-                            <div class="form-group">
-                                <input type="text" class="general-text-input form-control" name="username"
-                                       id="login-username" placeholder="Username or Email Address" value=""/>
-                            </div>
-                            <div class="form-group">
-                                <input class="general-text-input form-control" type="password" name="password"
-                                       id="password" placeholder="Password"/>
-                            </div>
-                            <div id="specialism-search1" class="form-group">
-                                <input type="submit" class="navbar-btn nav-button wow" name="login" value="Login"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="rememberme" class="rememberme login-font">
-                                    <input name="rememberme" type="checkbox" id="rememberme" value="forever"/> Remember
-                                    Me</label>
-                            </div>
-                            <div class="form-group">
-                                <p class="lost_password login-font">
-                                    <a href="#">Lost Your Password?</a>
-                                </p>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Register -->
-                    <div class="tab-pane" id="registerTab">
-                        <form action="" class="form-inline">
-                            <div class="form-group">
-                                <input type="email" class="general-text-input form-control" name="reg_email"
-                                       id="reg_email" value="" placeholder="Email Address"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="general-text-input form-control" name="reg_username"
-                                       id="reg_username" value="" placeholder="Username"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="general-text-input form-control" name="password"
-                                       id="reg_password" placeholder="Password"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="general-text-input form-control" name="password"
-                                       id="reg_password2" placeholder="Repeat Password"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" class="navbar-btn nav-button wow" name="register"
-                                       value="Register"/>
-                            </div>
+                    <!--<div class="tab-content" id="loginTab" style="display: none;">-->
+                    <!--<form action="" class= "form-inline">-->
+                    <!--<div class="form-group">-->
+                    <!--<input type="text" class="input-text" name="username" id="username" placeholder="Username or Email Address" value="" />-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<input class="input-text" type="password" name="password" id="password" placeholder="Password"/>-->
+                    <!--</div>-->
+                    <!--<div id="specialism-search1" class="form-group">-->
+                    <!--<input type="submit" class="navbar-btn nav-button wow" name="login" value="Login" />-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<label for="rememberme" class="rememberme login-font">-->
+                    <!--<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<p class="lost_password login-font">-->
+                    <!--<a href="#" >Lost Your Password?</a>-->
+                    <!--</p>-->
+                    <!--</div>-->
+                    <!--</form>-->
+                    <!--</div>-->
 
-                        </form>
-                    </div>
+                    <!--&lt;!&ndash; Register &ndash;&gt;-->
+                    <!--<div class="tab-content" id="registerTab" style="display: none;">-->
+                    <!--<form method="post" class="register">-->
+                    <!--<p class="form-row form-row-wide">-->
+                    <!--<input type="email" class="input-text" name="reg_email" id="reg_email" value="" placeholder="Email Address"/>-->
+                    <!--</p>-->
+                    <!--<p class="form-row form-row-wide">-->
+                    <!--<input type="text" class="input-text" name="reg_username" id="reg_username" value="" placeholder="Username"/>-->
+                    <!--</p>-->
+                    <!--<p class="form-row form-row-wide">-->
+                    <!--<input type="password" class="input-text" name="password" id="reg_password" placeholder="Password"/>-->
+                    <!--</p>-->
+                    <!--<p class="form-row form-row-wide">-->
+                    <!--<input type="password" class="input-text" name="password" id="reg_password2" placeholder="Repeat Password"/>-->
+                    <!--</p>-->
+                    <!--<p class="form-row">-->
+                    <!--<input type="submit" class="button" name="register" value="Register" />-->
+                    <!--</p>-->
+
+                    <!--</form>-->
+                    <!--</div>-->
+                    <!--</div>-->
                 </div>
-
-                <div style="display: inline-block; margin: 0 auto;">
-                    <button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img
-                            src="img/login/facebookN.png"/></button>
-                    <button id="twitter" class="login-button-vertical"><img src="img/login/twitterN.png"/></button>
-                    <button id="google" class="customGPlusSignIn login-button-vertical"><img
-                            src="img/login/gmailN.png"/></button>
-                    <button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img
-                            src="img/login/linkedInN.png"/></button>
-                </div>
-
-                <!--<div class="tabs-container">-->
-                <!-- Login -->
-                <!--<div class="tab-content" id="loginTab" style="display: none;">-->
-                <!--<form action="" class= "form-inline">-->
-                <!--<div class="form-group">-->
-                <!--<input type="text" class="input-text" name="username" id="username" placeholder="Username or Email Address" value="" />-->
-                <!--</div>-->
-                <!--<div class="form-group">-->
-                <!--<input class="input-text" type="password" name="password" id="password" placeholder="Password"/>-->
-                <!--</div>-->
-                <!--<div id="specialism-search1" class="form-group">-->
-                <!--<input type="submit" class="navbar-btn nav-button wow" name="login" value="Login" />-->
-                <!--</div>-->
-                <!--<div class="form-group">-->
-                <!--<label for="rememberme" class="rememberme login-font">-->
-                <!--<input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label>-->
-                <!--</div>-->
-                <!--<div class="form-group">-->
-                <!--<p class="lost_password login-font">-->
-                <!--<a href="#" >Lost Your Password?</a>-->
-                <!--</p>-->
-                <!--</div>-->
-                <!--</form>-->
-                <!--</div>-->
-
-                <!--&lt;!&ndash; Register &ndash;&gt;-->
-                <!--<div class="tab-content" id="registerTab" style="display: none;">-->
-                <!--<form method="post" class="register">-->
-                <!--<p class="form-row form-row-wide">-->
-                <!--<input type="email" class="input-text" name="reg_email" id="reg_email" value="" placeholder="Email Address"/>-->
-                <!--</p>-->
-                <!--<p class="form-row form-row-wide">-->
-                <!--<input type="text" class="input-text" name="reg_username" id="reg_username" value="" placeholder="Username"/>-->
-                <!--</p>-->
-                <!--<p class="form-row form-row-wide">-->
-                <!--<input type="password" class="input-text" name="password" id="reg_password" placeholder="Password"/>-->
-                <!--</p>-->
-                <!--<p class="form-row form-row-wide">-->
-                <!--<input type="password" class="input-text" name="password" id="reg_password2" placeholder="Repeat Password"/>-->
-                <!--</p>-->
-                <!--<p class="form-row">-->
-                <!--<input type="submit" class="button" name="register" value="Register" />-->
-                <!--</p>-->
-
-                <!--</form>-->
+                <!--<div class="modal-footer" style="text-align: center;">-->
+                <!--<div style="display: inline-block; margin: 0 auto;">-->
+                <!--<button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img src="img/login/facebookN.png"/>"</button>-->
+                <!--<button id="twitter" class="login-button-vertical" ><img src="img/login/twitterN.png"/>"</button>-->
+                <!--<button id="google" class="customGPlusSignIn login-button-vertical"><img src="img/login/gmailN.png"/></button>-->
+                <!--<button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img src="img/login/linkedInN.png"/>"</button>-->
                 <!--</div>-->
                 <!--</div>-->
             </div>
-            <!--<div class="modal-footer" style="text-align: center;">-->
-            <!--<div style="display: inline-block; margin: 0 auto;">-->
-            <!--<button id='facebook' class="login-button-vertical" onclick="fbLogin()"><img src="img/login/facebookN.png"/>"</button>-->
-            <!--<button id="twitter" class="login-button-vertical" ><img src="img/login/twitterN.png"/>"</button>-->
-            <!--<button id="google" class="customGPlusSignIn login-button-vertical"><img src="img/login/gmailN.png"/></button>-->
-            <!--<button id="linkedin" class="login-button-vertical" onclick="liAuth()"><img src="img/login/linkedInN.png"/>"</button>-->
-            <!--</div>-->
-            <!--</div>-->
         </div>
     </div>
-</div>
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-select.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/main.js"></script>
-<script src="js/custom/socialLogin.js"></script>
-<script src="js/custom/custom.js"></script>
-<script src="js/custom/jobFinderInfoAdd.js"></script>
-<script src="js/custom/CVAndCoverLetter.js"></script>
-
-
-<!--<script src="js/leaflet/leaflet-search-control.js"></script>-->
-<!--<script src="js/leaflet/leaflet.featuregroup.subgroup.js"></script>-->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script src="js/leaflet/leaflet.js"></script>
-<script src="js/leaflet/leaflet.markercluster.js"></script>
-<script src="js/leaflet/marker.js"></script>
-<script src="js/leaflet/marker.rotate.js"></script>
-<script src="js/uikit/uikit.min.js"></script>
-<script src="js/uikit/addons/notify.min.js"></script>
-
 </body>
 </html>

@@ -11,9 +11,9 @@ var cvCoverLetterSection = "cv-cover-letter-section";
 var changePasswordSection = "change-password-section";
 
 $(document).ready(function() {
-    $(".nav-side-menu .sub-menu.collapse li").click(function() {
+    $(".nav-side-menu.job-seeker-side-menu .sub-menu.collapse li").click(function() {
 
-        $(".nav-side-menu .sub-menu.collapse li").removeClass("active");
+        $(".nav-side-menu.job-seeker-side-menu .sub-menu.collapse li").removeClass("active");
         $(this).addClass("active");
         //gives its own ul id
         var menuContentId = $(this).closest("ul").attr("id");
@@ -52,13 +52,13 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $("#profile-section-collapse-id").addClass("active");
-    $(".nav-side-menu li.menu-list-item").click(function() {
+    $(".nav-side-menu.job-seeker-side-menu li.menu-list-item").click(function() {
         //only changing the other elements if its a fresh click
         if ($(this).attr("class").toLowerCase().indexOf("active") < 0) {
             //removing active from all other main menus
-            $(".nav-side-menu li.menu-list-item").removeClass("active");
+            $(".nav-side-menu.job-seeker-side-menu li.menu-list-item").removeClass("active");
             //removing active from all other sub menus
-            $(".nav-side-menu .sub-menu.collapse li").removeClass("active");
+            $(".nav-side-menu.job-seeker-side-menu .sub-menu.collapse li").removeClass("active");
             //activating its own
             $(this).addClass("active");
 
@@ -74,25 +74,6 @@ $(document).ready(function() {
                 $("#resume-section-work-info-collapse-id").removeClass("active");
             }
         }
-
-
-
-
-        //TODO: wrote to execute collapse programmatically but doesn't work
-        // var ulListOwner = $(this).attr("data-target");
-        // var mainListItems = $("li.menu-list-item");
-        // mainListItems.each(function(idx, li) {
-        //     var attr = $(li).attr('data-target');
-        //     if (typeof attr !== typeof undefined && attr !== false && ulListOwner != attr) {
-        //         $(li).removeClass("collapsed");
-        //         $(li).attr("aria-expanded","false");
-        //         $(li).collapse('hide');
-        //     }
-        // });
-        console.log("ha ha");
-
-
-
     });
 });
 
