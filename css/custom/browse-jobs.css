@@ -6,7 +6,7 @@
 
 .sub-slider-area-large {
     position: relative;
-    height: 200px
+    height: 250px
 }
 
 .sub-slider-area-large h3 {
@@ -86,4 +86,29 @@
 
 #dashboard-nav-side-menu-job-browse.nav-side-menu li a {
     background-color: #efeeee;
+}
+
+#sub-bg-slider .item img {
+    height: 440px;
+}
+#sub-bg-slider .item img {
+    height: 440px;
+}
+#sub-bg-slider .item img {
+    height: 440px;
+}
+#sub-bg-slider .item img {
+    height: 540px;
+}
+#sub-bg-slider .item img{
+    width: 100%;
+    height: 500px
+}
+.sub-slider-area-large #sub-bg-slider .item img {
+    width: 100%;
+    height: 200px
+}
+
+.pull-right-jobs {
+    margin-right: 20px;
 }
